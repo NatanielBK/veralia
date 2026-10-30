@@ -365,6 +365,46 @@
     if (nextBtn) nextBtn.addEventListener("click", function () { scrollToCard(1); });
   }
 
+  /* ---------- Dla kogo: karuzela na telefonie — kropki idą za przewijaniem ---------- */
+  var levelsTrack = document.querySelector(".levels-track");
+  var levelsDots = document.querySelector(".levels-dots");
+  if (levelsTrack && levelsDots) {
+    var lDots = levelsDots.querySelectorAll("span");
+    var lCards = levelsTrack.querySelectorAll(".level-card");
+    var setLevelDot = function (idx) {
+      lDots.forEach(function (dot, i) { dot.classList.toggle("is-active", i === idx); });
+    };
+    var cardOffset = function (card) {
+      return card.getBoundingClientRect().left - levelsTrack.getBoundingClientRect().left;
+    };
+    var updateLevelDot = function () {
+      var max = levelsTrack.scrollWidth - levelsTrack.clientWidth;
+      if (max <= 0) return;
+      if (levelsTrack.scrollLeft >= max - 4) { setLevelDot(lCards.length - 1); return; }
+      var best = 0, bestDist = Infinity;
+      lCards.forEach(function (card, i) {
+        var d = Math.abs(cardOffset(card));
+        if (d < bestDist) { bestDist = d; best = i; }
+      });
+      setLevelDot(best);
+    };
+    var lTick = false;
+    levelsTrack.addEventListener("scroll", function () {
+      if (lTick) return;
+      lTick = true;
+      requestAnimationFrame(function () { lTick = false; updateLevelDot(); });
+    }, { passive: true });
+    lDots.forEach(function (dot, i) {
+      dot.addEventListener("click", function () {
+        var pad = parseFloat(getComputedStyle(levelsTrack).scrollPaddingLeft) || 0;
+        levelsTrack.scrollTo({
+          left: levelsTrack.scrollLeft + cardOffset(lCards[i]) - pad,
+          behavior: prefersReduced ? "auto" : "smooth"
+        });
+      });
+    });
+  }
+
   /* ---------- FAQ: filtr kategorii ---------- */
   var faqFilters = document.querySelector(".faq-filters");
   if (faqFilters) {

@@ -2296,3 +2296,18 @@ section { padding-left: 0; padding-right: 0; }
 @media (min-width: 640px) {
   .subject-tile .subject-desc-short { display: none; }
 }
+
+/* v6: „Dla kogo” — na tablecie siatka 2×2 zamiast karuzeli, na telefonie klikalne kropki */
+@media (min-width: 640px) and (max-width: 1023px) {
+  .levels-track {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: visible;
+    padding: 0 var(--space-md);
+    scroll-snap-type: none;
+  }
+  .level-card { flex: none; }
+  .levels-dots { display: none; }
+}
+.levels-dots span { cursor: pointer; transition: background .2s ease, transform .2s ease; }
+.levels-dots span.is-active { transform: scale(1.3); }
