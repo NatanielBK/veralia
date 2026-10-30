@@ -331,79 +331,73 @@
     });
   }
 
-  /* ---------- Opinie: karuzela — kropki i strzałki ---------- */
-  var reviewsTrack = document.getElementById("reviewsTrack");
-  var reviewsDots = document.getElementById("reviewsDots");
-  if (reviewsTrack && reviewsDots) {
-    var dots = reviewsDots.querySelectorAll("span");
-    var cards = reviewsTrack.querySelectorAll(".review-card");
-
-    if ("IntersectionObserver" in window) {
-      var dotObserver = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              var idx = Array.prototype.indexOf.call(cards, entry.target);
-              dots.forEach(function (dot, i) { dot.classList.toggle("is-active", i === idx); });
-            }
-          });
-        },
-        { root: reviewsTrack, threshold: 0.6 }
-      );
-      cards.forEach(function (card) { dotObserver.observe(card); });
+  /* ---------- Karuzele (Dla kogo, Opinie): kropki zawsze pokazują kartę, którą widać ---------- */
+  function initCarousel(track, dotsWrap, cardSel, align, prevBtn, nextBtn) {
+    if (!track || !dotsWrap) return;
+    var dotEls = dotsWrap.querySelectorAll("span");
+    var cardEls = track.querySelectorAll(cardSel);
+    if (!cardEls.length) return;
+    var current = -1;
+    function maxScroll() { return track.scrollWidth - track.clientWidth; }
+    function padLeft() { return parseFloat(getComputedStyle(track).scrollPaddingLeft) || 0; }
+    // o ile trzeba przewinąć, żeby karta stanęła na swoim miejscu
+    function delta(card) {
+      var t = track.getBoundingClientRect(), c = card.getBoundingClientRect();
+      if (align === "center") return (c.left + c.width / 2) - (t.left + t.width / 2);
+      return c.left - t.left - padLeft();
     }
-
-    var prevBtn = document.getElementById("reviewPrev");
-    var nextBtn = document.getElementById("reviewNext");
-    function scrollToCard(dir) {
-      var idx = 0;
-      dots.forEach(function (dot, i) { if (dot.classList.contains("is-active")) idx = i; });
-      var next = Math.min(Math.max(idx + dir, 0), cards.length - 1);
-      cards[next].scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth", inline: "center", block: "nearest" });
+    function setActive(idx) {
+      if (idx === current) return;
+      current = idx;
+      dotEls.forEach(function (dot, i) { dot.classList.toggle("is-active", i === idx); });
     }
-    if (prevBtn) prevBtn.addEventListener("click", function () { scrollToCard(-1); });
-    if (nextBtn) nextBtn.addEventListener("click", function () { scrollToCard(1); });
-  }
-
-  /* ---------- Dla kogo: karuzela na telefonie — kropki idą za przewijaniem ---------- */
-  var levelsTrack = document.querySelector(".levels-track");
-  var levelsDots = document.querySelector(".levels-dots");
-  if (levelsTrack && levelsDots) {
-    var lDots = levelsDots.querySelectorAll("span");
-    var lCards = levelsTrack.querySelectorAll(".level-card");
-    var setLevelDot = function (idx) {
-      lDots.forEach(function (dot, i) { dot.classList.toggle("is-active", i === idx); });
-    };
-    var cardOffset = function (card) {
-      return card.getBoundingClientRect().left - levelsTrack.getBoundingClientRect().left;
-    };
-    var updateLevelDot = function () {
-      var max = levelsTrack.scrollWidth - levelsTrack.clientWidth;
-      if (max <= 0) return;
-      if (levelsTrack.scrollLeft >= max - 4) { setLevelDot(lCards.length - 1); return; }
+    function update() {
+      var max = maxScroll();
+      // wszystko się mieści: kropki niepotrzebne
+      dotsWrap.style.visibility = max > 2 ? "" : "hidden";
+      if (max <= 2 || track.scrollLeft <= 2) { setActive(0); return; }
+      if (track.scrollLeft >= max - 2) { setActive(cardEls.length - 1); return; }
       var best = 0, bestDist = Infinity;
-      lCards.forEach(function (card, i) {
-        var d = Math.abs(cardOffset(card));
+      cardEls.forEach(function (card, i) {
+        var d = Math.abs(delta(card));
         if (d < bestDist) { bestDist = d; best = i; }
       });
-      setLevelDot(best);
-    };
-    var lTick = false;
-    levelsTrack.addEventListener("scroll", function () {
-      if (lTick) return;
-      lTick = true;
-      requestAnimationFrame(function () { lTick = false; updateLevelDot(); });
-    }, { passive: true });
-    lDots.forEach(function (dot, i) {
-      dot.addEventListener("click", function () {
-        var pad = parseFloat(getComputedStyle(levelsTrack).scrollPaddingLeft) || 0;
-        levelsTrack.scrollTo({
-          left: levelsTrack.scrollLeft + cardOffset(lCards[i]) - pad,
-          behavior: prefersReduced ? "auto" : "smooth"
-        });
-      });
+      setActive(best);
+    }
+    function goTo(i) {
+      i = Math.min(Math.max(i, 0), cardEls.length - 1);
+      var left = Math.min(Math.max(track.scrollLeft + delta(cardEls[i]), 0), maxScroll());
+      track.scrollTo({ left: left, behavior: prefersReduced ? "auto" : "smooth" });
+    }
+    var tick = false;
+    function onScroll() {
+      if (tick) return;
+      tick = true;
+      requestAnimationFrame(function () { tick = false; update(); });
+    }
+    track.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    window.addEventListener("load", update);
+    dotEls.forEach(function (dot, i) {
+      dot.addEventListener("click", function () { goTo(i); });
     });
+    if (prevBtn) prevBtn.addEventListener("click", function () { goTo(Math.max(current, 0) - 1); });
+    if (nextBtn) nextBtn.addEventListener("click", function () { goTo(Math.max(current, 0) + 1); });
+    update();
   }
+
+  initCarousel(
+    document.querySelector(".levels-track"),
+    document.querySelector(".levels-dots"),
+    ".level-card", "start"
+  );
+  initCarousel(
+    document.getElementById("reviewsTrack"),
+    document.getElementById("reviewsDots"),
+    ".review-card", "center",
+    document.getElementById("reviewPrev"),
+    document.getElementById("reviewNext")
+  );
 
   /* ---------- FAQ: filtr kategorii ---------- */
   var faqFilters = document.querySelector(".faq-filters");
