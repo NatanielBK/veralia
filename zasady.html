@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <script>document.documentElement.classList.add("js");</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zasady zajęć — Veralia | Centrum Korepetycji Online</title>
+  <meta name="description" content="Zasady zajęć w Veralii: organizacja, zapisy, cennik, płatności, odwoływanie zajęć i więcej.">
+  <link rel="canonical" href="zasady.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Zasady zajęć — Veralia | Centrum Korepetycji Online">
+  <meta property="og:description" content="Zasady zajęć w Veralii: organizacja, zapisy, cennik, płatności, odwoływanie zajęć i więcej.">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta property="og:locale" content="pl_PL">
+
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Przejdź do treści</a>
+
+  <!-- ===== NAGŁÓWEK ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner container">
+      <a href="index.html" class="brand" aria-label="Veralia — strona główna">
+        <picture>
+          <source type="image/webp" srcset="assets/monogram-va.webp">
+          <img class="brand-monogram" src="assets/monogram-va.png" alt="" width="34" height="34" loading="eager">
+        </picture>
+        <span class="brand-word">Veralia</span>
+      </a>
+
+      <nav aria-label="Menu główne">
+        <ul class="desktop-nav">
+          <li class="has-mega">
+            <button class="nav-link" id="megaTrigger" aria-expanded="false" aria-controls="megaMenu">
+              Przedmioty
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <div class="mega-menu" id="megaMenu" role="menu">
+              <div>
+                <p class="mega-col-title">Przedmioty szkolne</p>
+                <a href="przedmioty/matematyka.html">Matematyka</a>
+                <a href="przedmioty/jezyk-polski.html">Język polski</a>
+                <a href="przedmioty/fizyka.html">Fizyka</a>
+                <a href="przedmioty/chemia.html">Chemia</a>
+                <a href="przedmioty/biologia.html">Biologia</a>
+                <a href="przedmioty/geografia.html">Geografia</a>
+                <a href="przedmioty/historia.html">Historia</a>
+                <a href="przedmioty/informatyka.html">Informatyka</a>
+              </div>
+              <div>
+                <p class="mega-col-title">Języki obce</p>
+                <a href="przedmioty/jezyk-angielski.html">Język angielski</a>
+                <a href="przedmioty/jezyk-hiszpanski.html">Język hiszpański</a>
+                <a href="przedmioty/jezyk-rosyjski.html">Język rosyjski</a>
+              </div>
+              <a class="mega-all" href="przedmioty/index.html">Wszystkie przedmioty →</a>
+            </div>
+          </li>
+          <li><a class="nav-link" data-nav="cennik" href="cennik.html">Cennik</a></li>
+          <li><a class="nav-link" data-nav="jak-dzialamy" href="jak-dzialamy.html">Jak działamy</a></li>
+          <li><a class="nav-link" data-nav="o-nas" href="o-nas.html">O nas</a></li>
+          <li><a class="nav-link" data-nav="faq" href="faq.html">FAQ</a></li>
+          <li><a class="nav-link" data-nav="blog" href="blog/index.html">Blog</a></li>
+          <li><a class="nav-link" data-nav="kontakt" href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="kontakt.html#formularz" class="btn btn-primary">Zapisz się</a>
+        <button class="hamburger mobile-menu-trigger" id="hamburgerBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Otwórz menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MENU MOBILNE (pełnoekranowe) ===== -->
+  <div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Menu nawigacyjne">
+    <div class="mobile-menu-top">
+      <a href="index.html" class="brand" aria-hidden="true" tabindex="-1">
+        <picture>
+          <source type="image/webp" srcset="assets/monogram-va.webp">
+          <img class="brand-monogram" src="assets/monogram-va.png" alt="" width="34" height="34">
+        </picture>
+        <span class="brand-word">Veralia</span>
+      </a>
+      <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Zamknij menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+
+    <ul class="mobile-menu-links">
+      <li>
+        <button class="mobile-subjects-toggle" id="subjectsToggle" aria-expanded="false" aria-controls="subjectsList">
+          <span class="toggle-label"><span class="num">01</span> Przedmioty</span>
+          <svg class="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="mobile-subjects-list" id="subjectsList">
+          <div>
+            <ul>
+              <li><a href="przedmioty/matematyka.html">Matematyka</a></li>
+              <li><a href="przedmioty/jezyk-polski.html">Język polski</a></li>
+              <li><a href="przedmioty/fizyka.html">Fizyka</a></li>
+              <li><a href="przedmioty/chemia.html">Chemia</a></li>
+              <li><a href="przedmioty/biologia.html">Biologia</a></li>
+              <li><a href="przedmioty/geografia.html">Geografia</a></li>
+              <li><a href="przedmioty/historia.html">Historia</a></li>
+              <li><a href="przedmioty/informatyka.html">Informatyka</a></li>
+              <li><a href="przedmioty/jezyk-angielski.html">Język angielski</a></li>
+              <li><a href="przedmioty/jezyk-hiszpanski.html">Język hiszpański</a></li>
+              <li><a href="przedmioty/jezyk-rosyjski.html">Język rosyjski</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li><a class="mobile-link" data-nav="cennik" href="cennik.html"><span class="num">02</span> Cennik</a></li>
+      <li><a class="mobile-link" data-nav="jak-dzialamy" href="jak-dzialamy.html"><span class="num">03</span> Jak działamy</a></li>
+      <li><a class="mobile-link" data-nav="o-nas" href="o-nas.html"><span class="num">04</span> O nas</a></li>
+      <li><a class="mobile-link" data-nav="faq" href="faq.html"><span class="num">05</span> FAQ</a></li>
+      <li><a class="mobile-link" data-nav="blog" href="blog/index.html"><span class="num">06</span> Blog</a></li>
+      <li><a class="mobile-link" data-nav="kontakt" href="kontakt.html"><span class="num">07</span> Kontakt</a></li>
+    </ul>
+
+    <div class="mobile-menu-bottom">
+      <a href="kontakt.html#formularz" class="btn btn-primary btn-block">Zapisz się na korepetycje</a>
+      <div class="mobile-menu-contact">
+        <div class="social-icons">
+          <a href="mailto:veralia.szkolakorepetycji@gmail.com" aria-label="Napisz e-mail do Veralii">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M4 6.5l8 6.5 8-6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/p/VerAlia-Szko%C5%82a-Korepetycji-Online-61596003688326/" aria-label="Facebook Veralii">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 8.5h2V5.6c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.1H8.3v3.2h2.5V21h3.3v-5.9h2.5l.4-3.2h-2.9V9.8c0-.5.2-1.3 1.4-1.3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/veralia.szkolakorepetycji" aria-label="Instagram Veralii">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <main id="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section class="page-hero">
+      <div class="container">
+        <a class="back-link" href="index.html">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+          Wróć na stronę główną
+        </a>
+        <span class="section-label reveal">Zasady zajęć</span>
+        <h1 class="reveal">Zasady zajęć w&nbsp;Veralii</h1>
+        <p class="lead reveal">Przejrzyste zasady. Profesjonalna organizacja. Komfortowa nauka. W&nbsp;Veralii zależy nam na&nbsp;budowaniu współpracy opartej na&nbsp;wzajemnym szacunku, zaufaniu i&nbsp;dobrej organizacji. Dlatego przygotowaliśmy najważniejsze informacje dotyczące uczestnictwa w&nbsp;naszych korepetycjach online.</p>
+
+        <details class="toc reveal">
+          <summary>Spis treści</summary>
+          <ol>
+            <li><a href="#organizacja-zajec">1. Organizacja zajęć</a></li>
+            <li><a href="#zapisy">2. Zapisy na korepetycje</a></li>
+            <li><a href="#cennik-zasady">3. Cennik</a></li>
+            <li><a href="#platnosci">4. Płatności</a></li>
+            <li><a href="#odwolywanie">5. Odwoływanie i przekładanie zajęć</a></li>
+            <li><a href="#spoznienia">6. Spóźnienia i nieobecności</a></li>
+            <li><a href="#przygotowanie">7. Przygotowanie do zajęć</a></li>
+            <li><a href="#wspolpraca-korepetytor">8. Współpraca z korepetytorem</a></li>
+            <li><a href="#wspolpraca-rodzice">9. Współpraca z rodzicami</a></li>
+            <li><a href="#materialy">10. Materiały edukacyjne</a></li>
+            <li><a href="#rezygnacja">11. Rezygnacja ze współpracy</a></li>
+            <li><a href="#kontakt-wyjasnienia">12. Kontakt i sytuacje wymagające wyjaśnienia</a></li>
+          </ol>
+        </details>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="zasady-section" id="organizacja-zajec">
+          <h2>1. Organizacja zajęć</h2>
+          <ul>
+            <li>Wszystkie korepetycje odbywają się indywidualnie, w&nbsp;formule online.</li>
+            <li>Standardowy czas trwania jednej lekcji wynosi 60&nbsp;minut.</li>
+            <li>Zajęcia prowadzone są przez korepetytorów współpracujących z&nbsp;Veralią.</li>
+            <li>Terminy ustalane są indywidualnie, z&nbsp;uwzględnieniem dostępności korepetytora i&nbsp;preferencji ucznia.</li>
+            <li>Zajęcia mogą mieć charakter jednorazowy lub&nbsp;regularny.</li>
+            <li>Nauka odbywa się z&nbsp;wykorzystaniem platformy umożliwiającej prowadzenie spotkań online w&nbsp;czasie rzeczywistym.</li>
+          </ul>
+        </div>
+
+        <div class="zasady-section" id="zapisy">
+          <h2>2. Zapisy na korepetycje</h2>
+          <ul>
+            <li>Zgłoszenia przyjmujemy poprzez formularz dostępny na&nbsp;naszej stronie internetowej lub&nbsp;wskazane kanały kontaktu.</li>
+            <li>Po&nbsp;otrzymaniu zgłoszenia kontaktujemy się z&nbsp;klientem w&nbsp;celu omówienia potrzeb edukacyjnych, doboru korepetytora oraz ustalenia dogodnego terminu.</li>
+            <li>Zgłoszenie poprzez formularz nie&nbsp;jest równoznaczne z&nbsp;automatyczną rezerwacją terminu.</li>
+            <li>Rezerwacja zajęć zostaje potwierdzona po&nbsp;uzgodnieniu warunków współpracy i&nbsp;dokonaniu wymaganych formalności.</li>
+            <li>W&nbsp;przypadku uczniów niepełnoletnich zapisu dokonuje rodzic lub&nbsp;opiekun prawny.</li>
+          </ul>
+        </div>
+
+        <div class="zasady-section" id="cennik-zasady">
+          <h2>3. Cennik</h2>
+          <p>Obowiązujące ceny za&nbsp;jedną indywidualną lekcję online wynoszą:</p>
+          <ul>
+            <li>Korepetycje z&nbsp;przedmiotów szkolnych – 130&nbsp;zł / 60&nbsp;minut.</li>
+            <li>Korepetycje na&nbsp;poziomie rozszerzonym – 140&nbsp;zł / 60&nbsp;minut.</li>
+            <li>Język angielski, hiszpański i&nbsp;rosyjski – 140&nbsp;zł / 60&nbsp;minut.</li>
+          </ul>
+          <p>Cena zajęć jest przedstawiana klientowi przed&nbsp;dokonaniem rezerwacji.</p>
+        </div>
+
+        <div class="zasady-section" id="platnosci">
+          <h2>4. Płatności</h2>
+          <ul>
+            <li>Płatności za&nbsp;korepetycje dokonywane są bezpośrednio na&nbsp;rzecz Veralii.</li>
+            <li>Obowiązuje płatność z&nbsp;góry, przed&nbsp;rozpoczęciem zajęć, zgodnie z&nbsp;terminem przekazanym podczas rezerwacji.</li>
+            <li>Informacje dotyczące sposobu płatności przekazywane są po&nbsp;ustaleniu szczegółów współpracy.</li>
+            <li>W&nbsp;przypadku regularnych zajęć istnieje możliwość uzgodnienia harmonogramu płatności.</li>
+            <li>Potwierdzenie rezerwacji i&nbsp;opłacenia zajęć przekazywane jest drogą elektroniczną.</li>
+          </ul>
+        </div>
+
+        <div class="zasady-section" id="odwolywanie">
+          <h2>5. Odwoływanie i&nbsp;przekładanie zajęć</h2>
+          <ul>
+            <li>Rozumiemy, że mogą wystąpić nieprzewidziane sytuacje wymagające zmiany terminu lekcji.</li>
+            <li>Uczeń lub&nbsp;rodzic może bezpłatnie odwołać albo&nbsp;poprosić o&nbsp;przełożenie zajęć, informując Veralię z&nbsp;co najmniej 24-godzinnym wyprzedzeniem.</li>
+            <li>W&nbsp;przypadku późniejszego odwołania zajęć mogą mieć zastosowanie wcześniej uzgodnione zasady rozliczenia zarezerwowanego terminu, uwzględniające rzeczywiste okoliczności i&nbsp;obowiązujące prawa konsumenta.</li>
+            <li>Jeśli zajęcia nie&nbsp;mogą odbyć się z&nbsp;przyczyn leżących po&nbsp;stronie Veralii lub&nbsp;korepetytora, proponujemy termin zastępczy albo&nbsp;zwrot opłaty za&nbsp;niezrealizowaną lekcję.</li>
+            <li>W&nbsp;wyjątkowych, nagłych sytuacjach zachęcamy do&nbsp;indywidualnego kontaktu w&nbsp;celu znalezienia odpowiedniego rozwiązania.</li>
+          </ul>
+        </div>
+
+        <div class="zasady-section" id="spoznienia">
+          <h2>6. Spóźnienia i&nbsp;nieobecności</h2>
+          <ul>
+            <li>Uczeń powinien dołączyć do&nbsp;spotkania punktualnie, o&nbsp;wcześniej ustalonej godzinie.</li>
+            <li>W&nbsp;przypadku spóźnienia ucznia zajęcia co&nbsp;do&nbsp;zasady kończą się o&nbsp;pierwotnie ustalonej godzinie.</li>
+            <li>Jeśli korepetytor spóźni się na&nbsp;spotkanie, czas zajęć zostanie odpowiednio wydłużony lub&nbsp;brakująca część lekcji zostanie rozliczona w&nbsp;inny uzgodniony sposób.</li>
+            <li>W&nbsp;przypadku problemów z&nbsp;połączeniem internetowym uczeń powinien niezwłocznie poinformować korepetytora lub&nbsp;Veralię.</li>
+            <li>W&nbsp;razie problemów technicznych uniemożliwiających przeprowadzenie zajęć strony ustalają sposób ich dokończenia lub&nbsp;rozliczenia, uwzględniając przyczynę przerwania lekcji.</li>
+          </ul>
+        </div>
+
+        <div class="zasady-section" id="przygotowanie">
+          <h2>7. Przygotowanie do&nbsp;zajęć</h2>
+          <ul>
+            <li>Uczeń powinien posiadać urządzenie umożliwiające uczestnictwo w&nbsp;zajęciach online oraz dostęp do&nbsp;internetu.</li>
+            <li>Zalecamy przygotowanie zeszytu, przyborów do&nbsp;pisania oraz materiałów związanych z&nbsp;omawianym tematem.</li>
+            <li>Jeśli uczeń chce omówić konkretne zadania lub&nbsp;przygotować się do&nbsp;sprawdzianu, zachęcamy do&nbsp;wcześniejszego przesłania materiałów.</li>
+            <li>Zajęcia powinny odbywać się w&nbsp;warunkach umożliwiających skupienie i&nbsp;swobodną komunikację.</li>
+          </ul>
+        </div>
+
+        <div class="zasady-section" id="wspolpraca-korepetytor">
+          <h2>8. Współpraca z&nbsp;korepetytorem</h2>
+          <ul>
+            <li>Korepetytor dostosowuje zakres i&nbsp;sposób prowadzenia zajęć do&nbsp;poziomu wiedzy oraz celów edukacyjnych ucznia.</li>
+            <li>W&nbsp;Veralii stawiamy na&nbsp;profesjonalizm, zaangażowanie i&nbsp;wzajemny szacunek.</li>
+            <li>Uczniowie mają możliwość zadawania pytań, zgłaszania trudności oraz wskazywania zagadnień wymagających dodatkowego wyjaśnienia.</li>
+            <li>W&nbsp;razie problemów dotyczących współpracy z&nbsp;nauczycielem prosimy o&nbsp;kontakt z&nbsp;Veralią.</li>
+            <li>W&nbsp;uzasadnionych przypadkach istnieje możliwość zmiany korepetytora, z&nbsp;uwzględnieniem dostępności naszej kadry.</li>
+          </ul>
+        </div>
+
+        <div class="zasady-section" id="wspolpraca-rodzice">
+          <h2>9. Współpraca z&nbsp;rodzicami</h2>
+          <ul>
+            <li>W&nbsp;przypadku uczniów niepełnoletnich kwestie organizacyjne i&nbsp;finansowe ustalamy z&nbsp;rodzicem lub&nbsp;opiekunem prawnym.</li>
+            <li>Rodzice mogą kontaktować się z&nbsp;Veralią w&nbsp;sprawach dotyczących organizacji zajęć oraz potrzeb edukacyjnych dziecka.</li>
+            <li>Zachęcamy do&nbsp;przekazywania informacji o&nbsp;trudnościach ucznia i&nbsp;jego celach, aby możliwe było jak&nbsp;najlepsze dopasowanie sposobu nauczania.</li>
+          </ul>
+        </div>
+
+        <div class="zasady-section" id="materialy">
+          <h2>10. Materiały edukacyjne</h2>
+          <ul>
+            <li>Korepetytorzy mogą wykorzystywać podczas zajęć materiały pomocnicze, ćwiczenia, prezentacje i&nbsp;zadania.</li>
+            <li>Materiały udostępniane uczniowi przeznaczone są do&nbsp;wykorzystania w&nbsp;celach edukacyjnych, zgodnie z&nbsp;zakresem udzielonej zgody lub&nbsp;licencji.</li>
+            <li>Nagrywanie zajęć przez ucznia, rodzica lub&nbsp;korepetytora wymaga wcześniejszego uzgodnienia i&nbsp;odpowiedniej podstawy prawnej.</li>
+            <li>Dbamy o&nbsp;ochronę prywatności uczniów i&nbsp;nauczycieli.</li>
+          </ul>
+        </div>
+
+        <div class="zasady-section" id="rezygnacja">
+          <h2>11. Rezygnacja ze&nbsp;współpracy</h2>
+          <ul>
+            <li>Uczeń lub&nbsp;jego rodzic może poinformować Veralię o&nbsp;chęci zakończenia współpracy.</li>
+            <li>Zakończenie współpracy nie&nbsp;wymaga podawania przyczyny, z&nbsp;zastrzeżeniem zasad dotyczących wcześniej zarezerwowanych zajęć i&nbsp;obowiązujących przepisów.</li>
+            <li>W&nbsp;przypadku lekcji opłaconych z&nbsp;góry rozliczamy przeprowadzone zajęcia i&nbsp;zwracamy należne środki za&nbsp;zajęcia niewykorzystane, z&nbsp;uwzględnieniem praw klienta oraz uzgodnionych warunków.</li>
+            <li>Ustawowe prawa konsumenta, w&nbsp;tym prawo odstąpienia od&nbsp;umowy zawartej na&nbsp;odległość, pozostają zachowane.</li>
+          </ul>
+        </div>
+
+        <div class="zasady-section" id="kontakt-wyjasnienia">
+          <h2>12. Kontakt i&nbsp;sytuacje wymagające wyjaśnienia</h2>
+          <p>Jeżeli pojawią się pytania, trudności organizacyjne lub&nbsp;zastrzeżenia dotyczące przeprowadzonych zajęć, zachęcamy do&nbsp;kontaktu z&nbsp;Veralią.</p>
+          <p>Każdą zgłoszoną sytuację traktujemy z&nbsp;należytą uwagą, dążąc do&nbsp;jej sprawnego i&nbsp;rzetelnego rozwiązania.</p>
+        </div>
+
+        <div class="zasady-outro reveal">
+          <span class="section-label">Veralia – Centrum Korepetycji Online</span>
+          <p>Profesjonalna edukacja oparta na&nbsp;wiedzy, zaufaniu i&nbsp;indywidualnym podejściu.</p>
+          <a href="index.html#formularz" class="btn btn-primary" style="margin-top: var(--space-md);">Zapisz się na&nbsp;korepetycje</a>
+        </div>
+
+      </div>
+    </section>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </main>
+<!-- ===== Stopka ===== -->
+  <footer id="kontakt">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <picture>
+          <source type="image/webp" srcset="assets/monogram-va.webp">
+          <img src="assets/monogram-va.png" alt="Veralia" width="40" height="26" loading="lazy">
+        </picture>
+        <p class="footer-tagline">Veralia – wiedza, która otwiera możliwości.</p>
+      </div>
+      <div class="footer-subjects">
+        <h3>Przedmioty</h3>
+        <ul class="footer-subjects-list">
+          <li><a href="przedmioty/matematyka.html">Matematyka</a></li>
+          <li><a href="przedmioty/jezyk-polski.html">Język polski</a></li>
+          <li><a href="przedmioty/fizyka.html">Fizyka</a></li>
+          <li><a href="przedmioty/chemia.html">Chemia</a></li>
+          <li><a href="przedmioty/biologia.html">Biologia</a></li>
+          <li><a href="przedmioty/geografia.html">Geografia</a></li>
+          <li><a href="przedmioty/historia.html">Historia</a></li>
+          <li><a href="przedmioty/informatyka.html">Informatyka</a></li>
+          <li><a href="przedmioty/jezyk-angielski.html">Język angielski</a></li>
+          <li><a href="przedmioty/jezyk-hiszpanski.html">Język hiszpański</a></li>
+          <li><a href="przedmioty/jezyk-rosyjski.html">Język rosyjski</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h3>Veralia</h3>
+        <a href="o-nas.html">O nas</a>
+        <a href="jak-dzialamy.html">Jak działamy</a>
+        <a href="cennik.html">Cennik</a>
+        <a href="blog/index.html">Blog</a>
+      </div>
+      <div class="footer-links">
+        <h3>Pomoc</h3>
+        <a href="faq.html">FAQ</a>
+        <a href="zasady.html">Zasady zajęć</a>
+        <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="kontakt.html">Kontakt</a>
+      </div>
+      <div class="footer-contact">
+        <h3>Napisz do nas</h3>
+        <a href="mailto:veralia.szkolakorepetycji@gmail.com" class="footer-mail">veralia.szkolakorepetycji@gmail.com</a>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/p/VerAlia-Szko%C5%82a-Korepetycji-Online-61596003688326/" target="_blank" rel="noopener" aria-label="Veralia na Facebooku">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M13.5 21v-7.2h2.4l.36-2.8h-2.76V9.2c0-.8.22-1.36 1.38-1.36h1.48V5.33A20 20 0 0014.9 5.2c-2.1 0-3.54 1.28-3.54 3.63v2.17H9v2.8h2.36V21h2.14z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/veralia.szkolakorepetycji" target="_blank" rel="noopener" aria-label="Veralia na Instagramie">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2026 Veralia</p>
+      <p>Projekt i&nbsp;wykonanie: NBK Projects</p>
+    </div>
+  </footer>
+<!-- Dolny pasek mobilny -->
+  <div class="mobile-sticky-bar" id="mobileStickyBar">
+    <a href="kontakt.html#formularz" class="btn btn-primary">Zapisz się</a>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>

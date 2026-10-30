@@ -1,0 +1,18 @@
+Źródła zdjęć — Veralia v2 (Pexels License, darmowe do użytku komercyjnego, bez wymogu podania autora)
+
+1. HERO (strona/assets/foto/hero-640/1280.jpg/webp) — użyte w ETAPIE 1
+   URL: https://www.pexels.com/photo/a-woman-in-mustard-shirt-studying-3807759/
+   ID: 3807759
+   Autor: Andrea Piacquadio (Pexels)
+   Licencja: Pexels License
+
+2. ZAJĘCIA ONLINE (dłonie piszące w zeszycie przy laptopie) — ID znaleziony, NIE pobrane jeszcze
+   URL: https://www.pexels.com/photo/4443182/ (do weryfikacji przed użyciem)
+   ID: 4443182
+   Status: do pobrania i obróbki w kolejnym etapie
+
+3. UCZEŃ W SŁUCHAWKACH przy biurku — do znalezienia w kolejnym etapie
+   Status: wyszukiwanie zablokowane przez Cloudflare (Pexels) podczas tego etapu, spróbować ponownie
+
+4. DETAL (książki/zeszyt/kubek) — do znalezienia w kolejnym etapie
+   Status: wyszukiwanie zablokowane przez Cloudflare (Pexels) podczas tego etapu, spróbować ponownie
