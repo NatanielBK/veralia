@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-  <meta name="robots" content="noindex, nofollow">
+<head><meta name="robots" content="noindex, nofollow">
   <script>document.documentElement.classList.add("js");</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,17 +13,38 @@
   <meta property="og:description" content="Zapisy na korepetycje online Veralii: formularz zgłoszeniowy, mail, Facebook i Instagram oraz informacja, co dzieje się po wysłaniu zgłoszenia.">
   <meta property="og:image" content="assets/og-image.jpg">
   <meta property="og:locale" content="pl_PL">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-
+  <link rel="preload" href="fonts/cormorant-garamond-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-500-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=7">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Strona główna",
+        "item": "index.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Kontakt",
+        "item": "kontakt.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 <a class="skip-link" href="#main">Przejdź do treści</a>
-
-  <!-- ===== NAGŁÓWEK ===== -->
+<!-- ===== NAGŁÓWEK ===== -->
   <header class="site-header" id="siteHeader">
     <div class="header-inner container">
       <a href="index.html" class="brand" aria-label="Veralia — strona główna">
@@ -146,37 +166,20 @@
     </div>
   </div>
 
-  
+
   <main id="main">
 
     <nav class="breadcrumbs container" aria-label="Okruszki">
       <a href="index.html">Strona główna</a><span aria-hidden="true">›</span><span aria-current="page">Kontakt</span>
     </nav>
-    <script type="application/ld+json">
-    {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Strona główna"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Kontakt"
-    }
-  ]
-}
-    </script>
 
-    <section class="page-hero-v4">
+
+<section class="page-hero-v4">
       <div class="container page-hero-v4-inner">
         <div class="page-hero-v4-text">
           <span class="section-label reveal">07 — Kontakt</span>
-          <h1 class="reveal">Zacznij od&nbsp;<em>jednej</em> lekcji</h1>
-          <p class="lead reveal">Wypełnij formularz, a&nbsp;skontaktujemy się z&nbsp;Tobą, dobierzemy korepetytora i&nbsp;ustalimy termin pierwszych zajęć.</p>
+          <h1 class="reveal">Zacznij od <em>jednej</em> lekcji</h1>
+          <p class="lead reveal">Wypełnij formularz, a skontaktujemy się z Tobą, dobierzemy korepetytora i ustalimy termin pierwszych zajęć.</p>
         </div>
         <span class="arch-frame page-hero-v4-arch" aria-hidden="true">
           <span class="arch-media">
@@ -188,16 +191,18 @@
         </span>
       </div>
     </section>
-<section id="formularz" class="section-dark">
+
+<!-- ===== Formularz ===== -->
+    <section id="formularz" class="section-dark">
       <div class="container form-grid">
         <div class="form-intro reveal">
           <span class="section-label on-dark">Formularz</span>
-          <h2>Zacznij od&nbsp;jednej lekcji</h2>
-          <p class="lead">Wypełnij krótki formularz, a&nbsp;skontaktujemy się z&nbsp;Tobą, aby ustalić szczegóły.</p>
+          <h2>Zacznij od jednej lekcji</h2>
+          <p class="lead">Wypełnij krótki formularz, a skontaktujemy się z Tobą, aby ustalić szczegóły.</p>
           <ul class="form-points">
-            <li><span class="check" aria-hidden="true">✓</span>Możesz zacząć od&nbsp;jednej lekcji, bez&nbsp;zobowiązań.</li>
-            <li><span class="check" aria-hidden="true">✓</span>Dobierzemy korepetytora do&nbsp;Twojego poziomu i&nbsp;potrzeb.</li>
-            <li><span class="check" aria-hidden="true">✓</span>Bezpłatne odwołanie najpóźniej 24&nbsp;godziny przed&nbsp;zajęciami.</li>
+            <li><span class="check" aria-hidden="true">✓</span>Możesz zacząć od jednej lekcji, bez zobowiązań.</li>
+            <li><span class="check" aria-hidden="true">✓</span>Dobierzemy korepetytora do Twojego poziomu i potrzeb.</li>
+            <li><span class="check" aria-hidden="true">✓</span>Bezpłatne odwołanie najpóźniej 24 godziny przed zajęciami.</li>
           </ul>
           <div class="form-contact">
             <a href="mailto:veralia.szkolakorepetycji@gmail.com">veralia.szkolakorepetycji@gmail.com</a>
@@ -213,16 +218,7 @@
         </div>
 
         <div class="form-wrap reveal">
-          <!--
-            Pokazówka: formularz nie wysyła danych na żaden serwer, tylko symuluje sukces w JS (main.js, handleSubmit).
-            Żeby podpiąć realną wysyłkę np. przez Formspree (https://formspree.io):
-            1. dodaj do <form> poniżej: action="https://formspree.io/f/TWÓJ_ID" method="POST"
-            2. w main.js, w handleSubmit, zamiast od razu pokazywać sukces, wyślij dane przez
-               fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
-               i dopiero w .then() pokaż stan sukcesu (albo błąd wysyłki).
-            Walidacja pól działa tak samo przed wysyłką, nie trzeba jej zmieniać.
-          -->
-          <form id="signupForm" class="signup-form" novalidate>
+          <form id="signupForm" class="signup-form" action="/api/kontakt" method="POST" novalidate>
             <div class="form-field">
               <label for="f-name">Imię i&nbsp;nazwisko</label>
               <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Wpisz imię i nazwisko" required aria-describedby="f-name-err">
@@ -284,39 +280,47 @@
             <div class="form-field">
               <label class="checkbox-field">
                 <input type="checkbox" id="f-rodo" name="rodo" required aria-describedby="f-rodo-err">
-                <span>Zapoznałem/am się z&nbsp;<a href="#">informacjami dotyczącymi przetwarzania danych osobowych</a>.</span>
+                <span>Zapoznałem/am się z&nbsp;<a href="polityka-prywatnosci.html">informacjami dotyczącymi przetwarzania danych osobowych</a>.</span>
               </label>
               <p class="field-error" id="f-rodo-err" role="alert"></p>
+            </div>
+
+            <!-- Pułapka na boty: pole niewidoczne dla ludzi, wypełniają je tylko automaty -->
+            <div class="form-hp" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">
+              <label for="f-website">Nie wypełniaj tego pola</label>
+              <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
             </div>
 
             <button type="submit" class="btn btn-primary form-submit" id="formSubmitBtn">
               <span class="btn-label">Wyślij zgłoszenie</span>
               <span class="spinner" aria-hidden="true"></span>
             </button>
+            <p class="field-error form-send-error" id="formSendErr" role="alert" hidden></p>
           </form>
 
           <div class="form-success" id="formSuccess" hidden tabindex="-1">
             <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>
-            <p>Dziękujemy, zgłoszenie dotarło. Skontaktujemy się z&nbsp;Tobą, aby ustalić szczegóły, dobrać korepetytora i&nbsp;zaproponować termin pierwszych zajęć.</p>
+            <p>Dziękujemy, zgłoszenie dotarło. Skontaktujemy się z Tobą, aby ustalić szczegóły, dobrać korepetytora i zaproponować termin pierwszych zajęć.</p>
           </div>
 
           <p class="form-contact-note">Masz pytania? Napisz: <a href="mailto:veralia.szkolakorepetycji@gmail.com">veralia.szkolakorepetycji@gmail.com</a></p>
         </div>
       </div>
     </section>
-    <section class="reveal">
+
+<section class="reveal">
       <div class="container kontakt-extra">
         <div class="policy-card">
-          <h3>Co dzieje się po&nbsp;wysłaniu formularza</h3>
+          <h3>Co dzieje się po wysłaniu formularza</h3>
           <ol class="kontakt-steps">
-            <li><span class="step-num">01</span><p>Czytamy Twoje zgłoszenie i&nbsp;kontaktujemy się z&nbsp;Tobą.</p></li>
-            <li><span class="step-num">02</span><p>Dobieramy korepetytora do&nbsp;poziomu, potrzeb i&nbsp;preferencji ucznia.</p></li>
-            <li><span class="step-num">03</span><p>Ustalamy termin pierwszej lekcji i&nbsp;przekazujemy informacje o&nbsp;płatności, która odbywa się z&nbsp;góry.</p></li>
+            <li><span class="step-num">01</span><p>Czytamy Twoje zgłoszenie i kontaktujemy się z Tobą.</p></li>
+            <li><span class="step-num">02</span><p>Dobieramy korepetytora do poziomu, potrzeb i preferencji ucznia.</p></li>
+            <li><span class="step-num">03</span><p>Ustalamy termin pierwszej lekcji i przekazujemy informacje o płatności, która odbywa się z góry.</p></li>
           </ol>
         </div>
         <div class="policy-card">
           <h3>Dane kontaktowe</h3>
-          <p>Masz pytanie przed&nbsp;zapisem? Napisz do&nbsp;nas, a&nbsp;odpowiemy, zanim zdecydujesz się na&nbsp;pierwszą lekcję. Na&nbsp;życzenie wystawiamy faktury.</p>
+          <p>Masz pytanie przed zapisem? Napisz do nas, a odpowiemy, zanim zdecydujesz się na pierwszą lekcję. Na życzenie wystawiamy faktury.</p>
           <ul class="kontakt-rows">
             <li><a href="mailto:veralia.szkolakorepetycji@gmail.com"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg>veralia.szkolakorepetycji@gmail.com</a></li>
             <li><a href="https://www.facebook.com/p/VerAlia-Szko%C5%82a-Korepetycji-Online-61596003688326/" target="_blank" rel="noopener"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M13.5 21v-7.2h2.4l.36-2.8h-2.76V9.2c0-.8.22-1.36 1.38-1.36h1.48V5.33A20 20 0 0014.9 5.2c-2.1 0-3.54 1.28-3.54 3.63v2.17H9v2.8h2.36V21h2.14z"/></svg>Facebook</a></li>
@@ -326,6 +330,8 @@
         </div>
       </div>
     </section>
+
+
 
   </main>
 <!-- ===== Stopka ===== -->
@@ -383,10 +389,10 @@
     </div>
     <div class="container footer-bottom">
       <p>© 2026 Veralia</p>
-      <p>Projekt i&nbsp;wykonanie: NBK Projects</p>
+      <p>Projekt i wykonanie: NBK Projects</p>
     </div>
   </footer>
-
   <script src="js/main.js?v=7"></script>
+
 </body>
 </html>

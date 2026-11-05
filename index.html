@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-  <meta name="robots" content="noindex, nofollow">
+<head><meta name="robots" content="noindex, nofollow">
   <script>document.documentElement.classList.add("js");</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,21 +8,19 @@
   <meta name="description" content="Veralia — indywidualne korepetycje online z przedmiotów szkolnych i języków obcych. Profesjonalne wsparcie w nauce, dopasowane do ucznia. Zapisz się na pierwszą lekcję.">
   <link rel="canonical" href="index.html">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Veralia — Centrum Korepetycji Online">
   <meta property="og:description" content="Profesjonalne wsparcie w nauce. Indywidualne podejście. Realne postępy. Korepetycje online od 130 zł za 60 minut.">
   <meta property="og:image" content="assets/og-image.jpg">
   <meta property="og:locale" content="pl_PL">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Favicony -->
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
-
+  <link rel="preload" href="fonts/cormorant-garamond-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/cormorant-garamond-500-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css?v=7">
-
-  <!-- Dane strukturalne -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -42,36 +39,181 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
-      {"@type": "Question", "name": "Jak zapisać się na korepetycje?", "acceptedAnswer": {"@type": "Answer", "text": "Wystarczy wypełnić formularz zgłoszeniowy na stronie, wskazując przedmiot, poziom nauczania i potrzeby. Skontaktujemy się, aby ustalić szczegóły i zaproponować termin pierwszych zajęć."}},
-      {"@type": "Question", "name": "Z jakich przedmiotów oferujecie korepetycje?", "acceptedAnswer": {"@type": "Answer", "text": "Wszystkie przedmioty szkolne (m.in. matematyka, polski, fizyka, chemia, biologia, geografia, historia, informatyka) oraz języki: angielski, hiszpański i rosyjski."}},
-      {"@type": "Question", "name": "Czy zajęcia prowadzą wykwalifikowani korepetytorzy?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, współpracujemy z profesjonalną kadrą korepetytorów z odpowiednią wiedzą merytoryczną i kompetencjami dydaktycznymi."}},
-      {"@type": "Question", "name": "Czy zajęcia są indywidualne?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, oferujemy korepetycje w formule 1:1, dostosowane tempem i materiałem do konkretnego ucznia."}},
-      {"@type": "Question", "name": "Ile trwa jedna lekcja?", "acceptedAnswer": {"@type": "Answer", "text": "Każda lekcja trwa pełne 60 minut."}},
-      {"@type": "Question", "name": "Ile kosztują korepetycje?", "acceptedAnswer": {"@type": "Answer", "text": "Przedmioty szkolne 130 zł/60 min, poziom rozszerzony 140 zł/60 min, języki obce (angielski, hiszpański, rosyjski) 140 zł/60 min."}},
-      {"@type": "Question", "name": "Jak odbywają się zajęcia online?", "acceptedAnswer": {"@type": "Answer", "text": "Zajęcia odbywają się w formie spotkań online w czasie rzeczywistym, z wykorzystaniem tablicy interaktywnej, prezentacji i materiałów edukacyjnych."}},
-      {"@type": "Question", "name": "Czy muszę posiadać specjalny sprzęt?", "acceptedAnswer": {"@type": "Answer", "text": "Wystarczy komputer lub tablet ze stabilnym internetem i mikrofonem. Zalecamy słuchawki."}},
-      {"@type": "Question", "name": "Czy mogę wybrać korepetytora?", "acceptedAnswer": {"@type": "Answer", "text": "Przy doborze nauczyciela uwzględniamy poziom nauczania, potrzeby i preferencje ucznia."}},
-      {"@type": "Question", "name": "Czy mogę zmienić korepetytora w trakcie współpracy?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, w razie potrzeby możemy zaproponować zmianę nauczyciela, zależnie od dostępności kadry."}},
-      {"@type": "Question", "name": "Czy mogę zapisać się tylko na jedną lekcję?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, nie trzeba deklarować długoterminowej współpracy — można zacząć od jednego spotkania."}},
-      {"@type": "Question", "name": "Czy zajęcia mogą odbywać się regularnie?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, oferujemy pojedyncze korepetycje i systematyczne zajęcia, np. raz lub dwa razy w tygodniu."}},
-      {"@type": "Question", "name": "Czy pomagacie w przygotowaniach do egzaminu ósmoklasisty i matury?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, przygotowujemy do egzaminu ósmoklasisty oraz matury na poziomie podstawowym i rozszerzonym."}},
-      {"@type": "Question", "name": "Czy pomagacie również uczniom mającym duże zaległości?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, korepetytor dostosowuje tempo nauki do aktualnych umiejętności ucznia, pomagając uporządkować materiał."}},
-      {"@type": "Question", "name": "Czy mogę odwołać lub przełożyć zajęcia?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, prosimy o wcześniejsze informowanie nas o zmianie terminu. Szczegóły w sekcji Zasady zajęć."}},
-      {"@type": "Question", "name": "Jak wygląda płatność za korepetycje?", "acceptedAnswer": {"@type": "Answer", "text": "Płatność dokonywana jest bezpośrednio na rzecz Veralii, po ustaleniu szczegółów współpracy."}},
-      {"@type": "Question", "name": "Czy otrzymam potwierdzenie zapisu?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, po przesłaniu formularza otrzymasz potwierdzenie zgłoszenia i dalsze informacje organizacyjne."}},
-      {"@type": "Question", "name": "Czy rodzic może kontaktować się z Wami w sprawie postępów dziecka?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, rodzic lub opiekun prawny ucznia niepełnoletniego może kontaktować się z nami w sprawach organizacyjnych i edukacyjnych."}},
-      {"@type": "Question", "name": "Czy mogę przesłać materiały lub zadania przed zajęciami?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, zachęcamy do wcześniejszego przesyłania materiałów i tematów do omówienia."}},
-      {"@type": "Question", "name": "Czy wystawiacie faktury?", "acceptedAnswer": {"@type": "Answer", "text": "Tak, na życzenie klienta wystawiamy fakturę zgodnie z obowiązującymi przepisami."}},
-      {"@type": "Question", "name": "Nie wiem, jakie zajęcia będą najlepsze. Czy pomożecie mi wybrać?", "acceptedAnswer": {"@type": "Answer", "text": "Oczywiście, skontaktuj się z nami — pomożemy określić potrzeby edukacyjne i dobrać odpowiednie zajęcia."}}
+      {
+        "@type": "Question",
+        "name": "Jak zapisać się na korepetycje?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To bardzo proste! Wystarczy wypełnić formularz zgłoszeniowy dostępny na naszej stronie internetowej, wskazując wybrany przedmiot, poziom nauczania oraz swoje potrzeby. Po otrzymaniu zgłoszenia skontaktujemy się z Tobą, aby ustalić szczegóły, dobrać odpowiedniego korepetytora i zaproponować termin pierwszych zajęć."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Z jakich przedmiotów oferujecie korepetycje?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oferujemy korepetycje online ze wszystkich przedmiotów szkolnych, w tym m.in. matematyki, języka polskiego, fizyki, chemii, biologii, geografii, historii i informatyki. Prowadzimy również zajęcia z języków obcych: angielskiego, hiszpańskiego i rosyjskiego. Pomagamy zarówno w bieżącej nauce, jak i w przygotowaniach do sprawdzianów, egzaminu ósmoklasisty oraz matury na poziomie podstawowym i rozszerzonym."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy mogę zapisać się tylko na jedną lekcję?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak. Nie musisz od razu deklarować długoterminowej współpracy. Możesz rozpocząć od pojedynczego spotkania, a następnie zdecydować, czy chcesz kontynuować naukę regularnie."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy zajęcia mogą odbywać się regularnie?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak. Oferujemy zarówno pojedyncze korepetycje, jak i systematyczne zajęcia, np. raz lub dwa razy w tygodniu. Regularna współpraca pozwala na bieżąco utrwalać wiedzę, monitorować postępy i konsekwentnie realizować cele edukacyjne."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy pomagacie w przygotowaniach do egzaminu ósmoklasisty i matury?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak. Oferujemy zajęcia przygotowujące do egzaminu ósmoklasisty oraz matury na poziomie podstawowym i rozszerzonym. Podczas przygotowań koncentrujemy się na wymaganiach egzaminacyjnych, typowych zadaniach, strategiach ich rozwiązywania oraz obszarach, które wymagają dodatkowego utrwalenia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy pomagacie również uczniom mającym duże zaległości?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Jak najbardziej. Nasze korepetycje są przeznaczone zarówno dla uczniów, którzy chcą poprawić bieżące wyniki, jak i dla osób potrzebujących bardziej kompleksowego wsparcia. Korepetytor dostosowuje tempo nauki do aktualnych umiejętności ucznia, pomagając stopniowo uporządkować i zrozumieć materiał."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy otrzymam potwierdzenie zapisu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak. Po przesłaniu formularza otrzymasz potwierdzenie zgłoszenia, a następnie skontaktujemy się z Tobą w celu ustalenia szczegółów. Po uzgodnieniu terminu prześlemy również informacje organizacyjne dotyczące pierwszej lekcji."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Nie wiem, jakie zajęcia będą najlepsze. Czy pomożecie mi wybrać?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oczywiście! Jeśli nie masz pewności, jakiego rodzaju wsparcia potrzebujesz, skontaktuj się z nami. Pomożemy określić potrzeby edukacyjne i dobrać odpowiednie zajęcia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy zajęcia prowadzą wykwalifikowani korepetytorzy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak. W Veralii stawiamy na współpracę z profesjonalną kadrą korepetytorów, którzy posiadają odpowiednią wiedzę merytoryczną oraz kompetencje pozwalające skutecznie przekazywać ją uczniom. Zależy nam nie tylko na wysokim poziomie nauczania, ale także na zaangażowaniu, cierpliwości i umiejętności dostosowania sposobu pracy do indywidualnych potrzeb ucznia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy zajęcia są indywidualne?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak. Oferujemy indywidualne korepetycje w formule 1:1, dzięki którym cała uwaga korepetytora skupiona jest na jednym uczniu. Pozwala to dostosować tempo pracy, zakres materiału i metody nauczania do konkretnych potrzeb oraz celów edukacyjnych."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ile trwa jedna lekcja?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Każda lekcja w Veralii trwa pełne 60 minut. Wierzymy, że odpowiednia ilość czasu pozwala nie tylko dokładnie omówić materiał, ale również przećwiczyć nowe zagadnienia i rozwiać ewentualne wątpliwości."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jak odbywają się zajęcia online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zajęcia prowadzone są w formie spotkań online z wykorzystaniem platformy umożliwiającej kontakt z korepetytorem w czasie rzeczywistym. Przed pierwszą lekcją otrzymasz wszystkie niezbędne informacje dotyczące sposobu połączenia. Podczas spotkania korepetytor może korzystać m.in. z tablicy interaktywnej, prezentacji, materiałów edukacyjnych oraz wspólnie rozwiązywanych zadań."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy muszę posiadać specjalny sprzęt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nie. Wystarczy komputer lub tablet ze stabilnym połączeniem internetowym, mikrofonem oraz możliwością uczestniczenia w spotkaniu online. Zalecamy korzystanie ze słuchawek, aby zapewnić większy komfort podczas zajęć."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy mogę wybrać korepetytora?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Zależy nam na tym, aby współpraca była komfortowa i skuteczna, dlatego przy doborze nauczyciela uwzględniamy poziom nauczania, potrzeby ucznia oraz jego preferencje. Jeśli zależy Ci na konkretnym sposobie prowadzenia zajęć, poinformuj nas o tym podczas zgłoszenia."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy mogę zmienić korepetytora w trakcie współpracy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oczywiście. Rozumiemy, że odpowiednie dopasowanie korepetytora ma ogromne znaczenie dla komfortu i efektywności nauki. Jeżeli z jakiegokolwiek powodu współpraca nie będzie spełniała Twoich oczekiwań, skontaktuj się z nami. Postaramy się zaproponować inne rozwiązanie lub zmianę nauczyciela, zależnie od dostępności naszej kadry."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy mogę odwołać lub przełożyć zajęcia?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak. Rozumiemy, że mogą wystąpić nieprzewidziane sytuacje. Prosimy o możliwie wcześniejsze informowanie nas o konieczności zmiany terminu. Szczegółowe zasady odwoływania i przekładania lekcji znajdują się w sekcji „Zasady zajęć”."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy mogę przesłać materiały lub zadania przed zajęciami?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oczywiście. Zachęcamy do wcześniejszego przesyłania materiałów, tematów oraz zagadnień, które mają zostać omówione podczas lekcji. Dzięki temu korepetytor może lepiej przygotować zajęcia i efektywnie wykorzystać wspólny czas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Ile kosztują korepetycje?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nasz cennik jest przejrzysty i zależy od rodzaju zajęć: korepetycje z przedmiotów szkolnych — 130 zł / 60 minut, korepetycje na poziomie rozszerzonym — 140 zł / 60 minut, język angielski, hiszpański i rosyjski — 140 zł / 60 minut. Cena obejmuje indywidualną, 60-minutową lekcję online."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Jak wygląda płatność za korepetycje?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Płatności za zajęcia dokonywane są bezpośrednio na rzecz Veralii. Po ustaleniu szczegółów współpracy przekazujemy informacje dotyczące terminu oraz sposobu opłacenia zajęć."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy wystawiacie faktury?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak. Na życzenie klienta wystawiamy fakturę zgodnie z obowiązującymi przepisami."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Czy rodzic może kontaktować się z Wami w sprawie postępów dziecka?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tak. Zależy nam na dobrej komunikacji i partnerskiej współpracy z rodzicami. W przypadku uczniów niepełnoletnich rodzic lub opiekun prawny może kontaktować się z nami w sprawach organizacyjnych oraz dotyczących przebiegu nauki i potrzeb edukacyjnych dziecka."
+        }
+      }
     ]
   }
   </script>
 </head>
 <body>
-
-  <a class="skip-link" href="#main">Przejdź do treści</a>
-
-  <!-- ===== NAGŁÓWEK ===== -->
+<a class="skip-link" href="#main">Przejdź do treści</a>
+<!-- ===== NAGŁÓWEK ===== -->
   <header class="site-header" id="siteHeader">
     <div class="header-inner container">
       <a href="#" class="brand" aria-label="Veralia — strona główna">
@@ -193,15 +335,18 @@
     </div>
   </div>
 
+
   <main id="main">
 
-    <!-- ===== HERO ===== -->
+
+
+<!-- ===== HERO ===== -->
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-text reveal">
           <span class="section-label">Centrum korepetycji online</span>
-          <h1>Profesjonalne wsparcie w&nbsp;nauce. <em>Indywidualne podejście.</em> Realne postępy.</h1>
-          <p class="hero-lead">Veralia to nowoczesne centrum korepetycji online, stworzone z&nbsp;pasji do&nbsp;edukacji i&nbsp;przekonania, że odpowiednio dobrane metody nauczania pozwalają każdemu uczniowi w&nbsp;pełni wykorzystać swój potencjał.</p>
+          <h1>Profesjonalne wsparcie w nauce. <em>Indywidualne podejście.</em> Realne postępy.</h1>
+          <p class="hero-lead">Veralia to nowoczesne centrum korepetycji online, stworzone z pasji do edukacji i przekonania, że odpowiednio dobrane metody nauczania pozwalają każdemu uczniowi w pełni wykorzystać swój potencjał.</p>
           <div class="hero-actions">
             <a href="#formularz" class="btn btn-primary">Zapisz się na korepetycje</a>
             <a href="#oferta" class="btn btn-outline">Zobacz przedmioty</a>
@@ -211,7 +356,7 @@
           <div class="hero-facts">
             <span>1:1 online</span><span class="sep">·</span>
             <span>60 minut</span><span class="sep">·</span>
-            <span>11 przedmiotów i&nbsp;języków</span>
+            <span>11 przedmiotów i języków</span>
           </div>
         </div>
 
@@ -222,6 +367,7 @@
                 <source type="image/webp" srcset="assets/foto/hero-640.webp 640w, assets/foto/hero-1280.webp 1280w" sizes="(min-width: 1024px) 420px, 80vw">
                 <img src="assets/foto/hero-1280.jpg" srcset="assets/foto/hero-640.jpg 640w, assets/foto/hero-1280.jpg 1280w" sizes="(min-width: 1024px) 420px, 80vw" width="640" height="853" alt="Uczennica nauki online przy laptopie z zeszytem" loading="eager" fetchpriority="high">
               </picture>
+
             </div>
           </div>
           <span class="hero-chip">od 130 zł</span>
@@ -233,118 +379,131 @@
       </div>
     </section>
 
-    <!-- ===== Przedmioty ===== -->
+<!-- ===== Przedmioty ===== -->
     <section id="oferta">
       <div class="container">
         <span class="section-label reveal">Przedmioty</span>
-        <h2 class="reveal">Przedmioty i&nbsp;języki, z&nbsp;którymi pomagamy</h2>
+        <h2 class="reveal">Przedmioty i języki, z którymi pomagamy</h2>
 
         <div class="subject-block reveal">
           <div class="subject-block-head">
             <h3>Przedmioty szkolne</h3>
-            <span class="subject-block-price">od&nbsp;130&nbsp;zł</span>
+            <span class="subject-block-price">od 130 zł</span>
           </div>
+          <p class="subject-block-desc">Indywidualne zajęcia online z przedmiotów szkolnych. Dopasowujemy je do poziomu nauczania, aktualnego materiału oraz indywidualnych potrzeb ucznia.</p>
           <div class="subject-tiles">
-            <a class="subject-tile" href="przedmioty/matematyka.html">
-              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.2" r="1.1"/><path d="M12 5.3v3M8 20l4-11.5L16 20M9.6 16.3h4.8"/></svg></span>
+<a class="subject-tile" href="przedmioty/matematyka.html">
+              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.2" r="1.1"></circle><path d="M12 5.3v3M8 20l4-11.5L16 20M9.6 16.3h4.8"></path></svg></span>
               <span class="subject-arrow" aria-hidden="true">→</span>
-              <span class="subject-desc">Od ułamków i&nbsp;procentów po&nbsp;funkcje, trygonometrię i&nbsp;maturę rozszerzoną.</span>
-              <span class="subject-desc-short">Od&nbsp;ułamków po&nbsp;maturę rozszerzoną</span>
+              <span class="subject-desc">Od ułamków i procentów po funkcje, trygonometrię i maturę rozszerzoną.</span>
+              <span class="subject-desc-short">Od ułamków po maturę rozszerzoną</span>
               <span class="subject-name">Matematyka</span>
-              <span class="subject-price">od&nbsp;130&nbsp;zł</span>
+              <span class="subject-price">od 130 zł</span>
             </a>
-            <a class="subject-tile" href="przedmioty/jezyk-polski.html">
-              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5L9 15c-.8.8-1.3 1.9-1.5 3L7 21l3-.5c1.1-.2 2.2-.7 3-1.5L23 9"/><path d="M15 9l3 3"/></svg></span>
+
+<a class="subject-tile" href="przedmioty/jezyk-polski.html">
+              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 5L9 15c-.8.8-1.3 1.9-1.5 3L7 21l3-.5c1.1-.2 2.2-.7 3-1.5L23 9"></path><path d="M15 9l3 3"></path></svg></span>
               <span class="subject-arrow" aria-hidden="true">→</span>
-              <span class="subject-desc">Lektury, wypracowania i&nbsp;interpretacja tekstów – od&nbsp;szkoły podstawowej po&nbsp;maturę.</span>
+              <span class="subject-desc">Lektury, wypracowania i interpretacja tekstów – od szkoły podstawowej po maturę.</span>
               <span class="subject-desc-short">Lektury, wypracowania, interpretacja</span>
               <span class="subject-name">Język polski</span>
-              <span class="subject-price">od&nbsp;130&nbsp;zł</span>
+              <span class="subject-price">od 130 zł</span>
             </a>
-            <a class="subject-tile" href="przedmioty/fizyka.html">
-              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.6"/><ellipse cx="12" cy="12" rx="9" ry="3.6"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(120 12 12)"/></svg></span>
+
+<a class="subject-tile" href="przedmioty/fizyka.html">
+              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1.6"></circle><ellipse cx="12" cy="12" rx="9" ry="3.6"></ellipse><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(60 12 12)"></ellipse><ellipse cx="12" cy="12" rx="9" ry="3.6" transform="rotate(120 12 12)"></ellipse></svg></span>
               <span class="subject-arrow" aria-hidden="true">→</span>
-              <span class="subject-desc">Ruch, siły, energia i&nbsp;prąd wyjaśnione krok po&nbsp;kroku, razem z&nbsp;zadaniami.</span>
-              <span class="subject-desc-short">Ruch, siły i&nbsp;prąd krok po&nbsp;kroku</span>
+              <span class="subject-desc">Ruch, siły, energia i prąd wyjaśnione krok po kroku, razem z zadaniami.</span>
+              <span class="subject-desc-short">Ruch, siły i prąd krok po kroku</span>
               <span class="subject-name">Fizyka</span>
-              <span class="subject-price">od&nbsp;130&nbsp;zł</span>
+              <span class="subject-price">od 130 zł</span>
             </a>
-            <a class="subject-tile" href="przedmioty/chemia.html">
-              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3h4M10 3v5.3L4.6 18a2 2 0 001.8 3h11.2a2 2 0 001.8-3L14 8.3V3"/><path d="M8.7 14.5h6.6"/></svg></span>
+
+<a class="subject-tile" href="przedmioty/chemia.html">
+              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3h4M10 3v5.3L4.6 18a2 2 0 001.8 3h11.2a2 2 0 001.8-3L14 8.3V3"></path><path d="M8.7 14.5h6.6"></path></svg></span>
               <span class="subject-arrow" aria-hidden="true">→</span>
-              <span class="subject-desc">Układ okresowy, reakcje i&nbsp;stężenia – zrozumienie zamiast uczenia się&nbsp;na&nbsp;pamięć.</span>
-              <span class="subject-desc-short">Reakcje i&nbsp;stężenia bez&nbsp;wkuwania</span>
+              <span class="subject-desc">Układ okresowy, reakcje i stężenia – zrozumienie zamiast uczenia się na pamięć.</span>
+              <span class="subject-desc-short">Reakcje i stężenia bez wkuwania</span>
               <span class="subject-name">Chemia</span>
-              <span class="subject-price">od&nbsp;130&nbsp;zł</span>
+              <span class="subject-price">od 130 zł</span>
             </a>
-            <a class="subject-tile" href="przedmioty/biologia.html">
-              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4C10 4 4 10 4 20c10 0 16-6 16-16z"/><path d="M6.5 17.5C10 14 14 10 17.5 6.5"/></svg></span>
+
+<a class="subject-tile" href="przedmioty/biologia.html">
+              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 4C10 4 4 10 4 20c10 0 16-6 16-16z"></path><path d="M6.5 17.5C10 14 14 10 17.5 6.5"></path></svg></span>
               <span class="subject-arrow" aria-hidden="true">→</span>
-              <span class="subject-desc">Od&nbsp;komórki i&nbsp;organizmu człowieka po&nbsp;genetykę i&nbsp;maturę rozszerzoną.</span>
-              <span class="subject-desc-short">Od&nbsp;komórki po&nbsp;genetykę</span>
+              <span class="subject-desc">Od komórki i organizmu człowieka po genetykę i maturę rozszerzoną.</span>
+              <span class="subject-desc-short">Od komórki po genetykę</span>
               <span class="subject-name">Biologia</span>
-              <span class="subject-price">od&nbsp;130&nbsp;zł</span>
+              <span class="subject-price">od 130 zł</span>
             </a>
-            <a class="subject-tile" href="przedmioty/geografia.html">
-              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span>
+
+<a class="subject-tile" href="przedmioty/geografia.html">
+              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"></path></svg></span>
               <span class="subject-arrow" aria-hidden="true">→</span>
-              <span class="subject-desc">Mapa, procesy w&nbsp;przyrodzie i&nbsp;geografia społeczna – do&nbsp;sprawdzianu i&nbsp;do&nbsp;matury.</span>
-              <span class="subject-desc-short">Mapa, przyroda i&nbsp;obliczenia</span>
+              <span class="subject-desc">Mapa, procesy w przyrodzie i geografia społeczna – do sprawdzianu i do matury.</span>
+              <span class="subject-desc-short">Mapa, przyroda i obliczenia</span>
               <span class="subject-name">Geografia</span>
-              <span class="subject-price">od&nbsp;130&nbsp;zł</span>
+              <span class="subject-price">od 130 zł</span>
             </a>
-            <a class="subject-tile" href="przedmioty/historia.html">
-              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 20h15M5.5 20V9M18.5 20V9M3.5 9h17L18 5H6l-2.5 4z"/><path d="M8.3 12v5M12 12v5M15.7 12v5"/></svg></span>
+
+<a class="subject-tile" href="przedmioty/historia.html">
+              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 20h15M5.5 20V9M18.5 20V9M3.5 9h17L18 5H6l-2.5 4z"></path><path d="M8.3 12v5M12 12v5M15.7 12v5"></path></svg></span>
               <span class="subject-arrow" aria-hidden="true">→</span>
-              <span class="subject-desc">Epoki, daty i&nbsp;źródła uporządkowane tak, żeby historia układała się&nbsp;w&nbsp;całość.</span>
-              <span class="subject-desc-short">Epoki, źródła, przyczyny i&nbsp;skutki</span>
+              <span class="subject-desc">Epoki, daty i źródła uporządkowane tak, żeby historia układała się w całość.</span>
+              <span class="subject-desc-short">Epoki, źródła, przyczyny i skutki</span>
               <span class="subject-name">Historia</span>
-              <span class="subject-price">od&nbsp;130&nbsp;zł</span>
+              <span class="subject-price">od 130 zł</span>
             </a>
-            <a class="subject-tile" href="przedmioty/informatyka.html">
-              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7L4 12l5 5M15 7l5 5-5 5"/></svg></span>
+
+<a class="subject-tile" href="przedmioty/informatyka.html">
+              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7L4 12l5 5M15 7l5 5-5 5"></path></svg></span>
               <span class="subject-arrow" aria-hidden="true">→</span>
-              <span class="subject-desc">Algorytmy, programowanie i&nbsp;arkusz kalkulacyjny – od&nbsp;podstaw po&nbsp;maturę&nbsp;z&nbsp;informatyki.</span>
-              <span class="subject-desc-short">Algorytmy, kod i&nbsp;bazy danych</span>
+              <span class="subject-desc">Algorytmy, programowanie i arkusz kalkulacyjny – od podstaw po maturę z informatyki.</span>
+              <span class="subject-desc-short">Algorytmy, kod i bazy danych</span>
               <span class="subject-name">Informatyka</span>
-              <span class="subject-price">od&nbsp;130&nbsp;zł</span>
+              <span class="subject-price">od 130 zł</span>
             </a>
+
           </div>
         </div>
 
         <div class="subject-block reveal">
           <div class="subject-block-head">
             <h3>Języki obce</h3>
-            <span class="subject-block-price">140&nbsp;zł</span>
+            <span class="subject-block-price">140 zł</span>
           </div>
+          <p class="subject-block-desc">Indywidualne lekcje języków obcych online, każda trwa pełne 60 minut.</p>
           <div class="subject-tiles">
-            <a class="subject-tile" href="przedmioty/jezyk-angielski.html">
-              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 011 1v9a1 1 0 01-1 1H9l-4 4v-4H4a1 1 0 01-1-1V6a1 1 0 011-1z"/><text x="12" y="13.2" font-size="9" font-family="Jost, sans-serif" font-weight="600" text-anchor="middle" fill="currentColor" stroke="none">EN</text></svg></span>
+<a class="subject-tile" href="przedmioty/jezyk-angielski.html">
+              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 011 1v9a1 1 0 01-1 1H9l-4 4v-4H4a1 1 0 01-1-1V6a1 1 0 011-1z"></path><text x="12" y="13.2" font-size="9" font-family="Jost, sans-serif" font-weight="600" text-anchor="middle" fill="currentColor" stroke="none">EN</text></svg></span>
               <span class="subject-arrow" aria-hidden="true">→</span>
-              <span class="subject-desc">Gramatyka, słownictwo i&nbsp;mówienie – na&nbsp;co&nbsp;dzień, do&nbsp;egzaminu ósmoklasisty i&nbsp;matury.</span>
+              <span class="subject-desc">Gramatyka, słownictwo i mówienie – na co dzień, do egzaminu ósmoklasisty i matury.</span>
               <span class="subject-desc-short">Gramatyka, słownictwo, mówienie</span>
               <span class="subject-name">Język angielski</span>
-              <span class="subject-price">140&nbsp;zł</span>
+              <span class="subject-price">140 zł</span>
             </a>
-            <a class="subject-tile" href="przedmioty/jezyk-hiszpanski.html">
-              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 011 1v9a1 1 0 01-1 1H9l-4 4v-4H4a1 1 0 01-1-1V6a1 1 0 011-1z"/><text x="12" y="13.2" font-size="9" font-family="Jost, sans-serif" font-weight="600" text-anchor="middle" fill="currentColor" stroke="none">ES</text></svg></span>
+
+<a class="subject-tile" href="przedmioty/jezyk-hiszpanski.html">
+              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 011 1v9a1 1 0 01-1 1H9l-4 4v-4H4a1 1 0 01-1-1V6a1 1 0 011-1z"></path><text x="12" y="13.2" font-size="9" font-family="Jost, sans-serif" font-weight="600" text-anchor="middle" fill="currentColor" stroke="none">ES</text></svg></span>
               <span class="subject-arrow" aria-hidden="true">→</span>
-              <span class="subject-desc">Od&nbsp;podstaw gramatyki po&nbsp;rozmowę i&nbsp;maturę – hiszpański krok po&nbsp;kroku.</span>
-              <span class="subject-desc-short">Od&nbsp;podstaw do&nbsp;swobodnej rozmowy</span>
+              <span class="subject-desc">Od podstaw gramatyki po rozmowę i maturę – hiszpański krok po kroku.</span>
+              <span class="subject-desc-short">Od podstaw do swobodnej rozmowy</span>
               <span class="subject-name">Język hiszpański</span>
-              <span class="subject-price">140&nbsp;zł</span>
+              <span class="subject-price">140 zł</span>
             </a>
-            <a class="subject-tile" href="przedmioty/jezyk-rosyjski.html">
-              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 011 1v9a1 1 0 01-1 1H9l-4 4v-4H4a1 1 0 01-1-1V6a1 1 0 011-1z"/><text x="12" y="13.2" font-size="9" font-family="Jost, sans-serif" font-weight="600" text-anchor="middle" fill="currentColor" stroke="none">RU</text></svg></span>
+
+<a class="subject-tile" href="przedmioty/jezyk-rosyjski.html">
+              <span class="subject-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16a1 1 0 011 1v9a1 1 0 01-1 1H9l-4 4v-4H4a1 1 0 01-1-1V6a1 1 0 011-1z"></path><text x="12" y="13.2" font-size="9" font-family="Jost, sans-serif" font-weight="600" text-anchor="middle" fill="currentColor" stroke="none">RU</text></svg></span>
               <span class="subject-arrow" aria-hidden="true">→</span>
-              <span class="subject-desc">Cyrylica, przypadki i&nbsp;rozmowa – rosyjski od&nbsp;pierwszych liter po&nbsp;maturę.</span>
-              <span class="subject-desc-short">Od&nbsp;cyrylicy po&nbsp;maturę</span>
+              <span class="subject-desc">Cyrylica, przypadki i rozmowa – rosyjski od pierwszych liter po maturę.</span>
+              <span class="subject-desc-short">Od cyrylicy po maturę</span>
               <span class="subject-name">Język rosyjski</span>
-              <span class="subject-price">140&nbsp;zł</span>
+              <span class="subject-price">140 zł</span>
             </a>
+
             <a class="subject-tile subject-tile-cta" href="kontakt.html">
-              <span class="subject-tile-cta-title">Nie wiesz, co&nbsp;wybrać?</span>
-              <span class="subject-tile-cta-link">Napisz do&nbsp;nas →</span>
+              <span class="subject-tile-cta-title">Nie wiesz, co wybrać?</span>
+              <span class="subject-tile-cta-link">Napisz do nas →</span>
             </a>
           </div>
         </div>
@@ -355,51 +514,51 @@
       </div>
     </section>
 
-    <!-- ===== Dla kogo ===== -->
+<!-- ===== Dla kogo ===== -->
     <section id="poziomy">
       <div class="container">
         <span class="section-label reveal">Dla kogo</span>
-        <h2 class="reveal">Od&nbsp;szkoły podstawowej po&nbsp;maturę</h2>
+        <h2 class="reveal">Od szkoły podstawowej po maturę</h2>
       </div>
       <div class="levels-track reveal" role="region" aria-label="Dla kogo, przewijane poziomo na telefonie">
         <article class="level-card">
           <span class="level-num">I.</span>
           <h3>Szkoła podstawowa</h3>
-          <p>Pomagamy w&nbsp;bieżącej nauce i&nbsp;nadrabianiu zaległości, w&nbsp;tempie dopasowanym do&nbsp;ucznia.</p>
+          <p>Pomagamy w bieżącej nauce i nadrabianiu zaległości, w tempie dopasowanym do ucznia.</p>
           <ul class="level-list">
-            <li><span class="check" aria-hidden="true">✓</span>Zajęcia dopasowane do&nbsp;aktualnego materiału</li>
-            <li><span class="check" aria-hidden="true">✓</span>Przygotowanie do&nbsp;sprawdzianów</li>
-            <li><span class="check" aria-hidden="true">✓</span>Nadrabianie zaległości krok po&nbsp;kroku</li>
+            <li><span class="check" aria-hidden="true">✓</span>Zajęcia dopasowane do aktualnego materiału</li>
+            <li><span class="check" aria-hidden="true">✓</span>Przygotowanie do sprawdzianów</li>
+            <li><span class="check" aria-hidden="true">✓</span>Nadrabianie zaległości krok po kroku</li>
           </ul>
         </article>
         <article class="level-card">
           <span class="level-num">II.</span>
           <h3>Egzamin ósmoklasisty</h3>
-          <p>Systematyczne przygotowanie z&nbsp;języka polskiego, matematyki i&nbsp;języka obcego.</p>
+          <p>Systematyczne przygotowanie z języka polskiego, matematyki i języka obcego.</p>
           <ul class="level-list">
-            <li><span class="check" aria-hidden="true">✓</span>Powtórka materiału z&nbsp;podstawy programowej</li>
+            <li><span class="check" aria-hidden="true">✓</span>Powtórka materiału z podstawy programowej</li>
             <li><span class="check" aria-hidden="true">✓</span>Wspólnie rozwiązywane zadania</li>
-            <li><span class="check" aria-hidden="true">✓</span>Regularna nauka, na&nbsp;przykład 1–2 razy w&nbsp;tygodniu</li>
+            <li><span class="check" aria-hidden="true">✓</span>Regularna nauka, na przykład 1–2 razy w tygodniu</li>
           </ul>
         </article>
         <article class="level-card">
           <span class="level-num">III.</span>
-          <h3>Liceum i&nbsp;technikum</h3>
-          <p>Bieżąca nauka na&nbsp;poziomie podstawowym i&nbsp;rozszerzonym, od&nbsp;pierwszej klasy.</p>
+          <h3>Liceum i technikum</h3>
+          <p>Bieżąca nauka na poziomie podstawowym i rozszerzonym, od pierwszej klasy.</p>
           <ul class="level-list">
-            <li><span class="check" aria-hidden="true">✓</span>Pomoc z&nbsp;aktualnym materiałem</li>
-            <li><span class="check" aria-hidden="true">✓</span>Przygotowanie do&nbsp;sprawdzianów</li>
-            <li><span class="check" aria-hidden="true">✓</span>Zadania o&nbsp;wyższym stopniu trudności na&nbsp;rozszerzeniu</li>
+            <li><span class="check" aria-hidden="true">✓</span>Pomoc z aktualnym materiałem</li>
+            <li><span class="check" aria-hidden="true">✓</span>Przygotowanie do sprawdzianów</li>
+            <li><span class="check" aria-hidden="true">✓</span>Zadania o wyższym stopniu trudności na rozszerzeniu</li>
           </ul>
         </article>
         <article class="level-card">
           <span class="level-num">IV.</span>
-          <h3>Matura podstawowa i&nbsp;rozszerzona</h3>
-          <p>Spokojne, systematyczne przygotowanie do&nbsp;matury z&nbsp;wybranych przedmiotów i&nbsp;języków.</p>
+          <h3>Matura podstawowa i rozszerzona</h3>
+          <p>Spokojne, systematyczne przygotowanie do matury z wybranych przedmiotów i języków.</p>
           <ul class="level-list">
             <li><span class="check" aria-hidden="true">✓</span>Dokładne zrozumienie materiału</li>
-            <li><span class="check" aria-hidden="true">✓</span>Zadania o&nbsp;wyższym stopniu trudności</li>
-            <li><span class="check" aria-hidden="true">✓</span>Nauka rozłożona w&nbsp;czasie</li>
+            <li><span class="check" aria-hidden="true">✓</span>Zadania o wyższym stopniu trudności</li>
+            <li><span class="check" aria-hidden="true">✓</span>Nauka rozłożona w czasie</li>
           </ul>
         </article>
       </div>
@@ -408,138 +567,136 @@
       </div>
     </section>
 
-    <!-- ===== Dlaczego Veralia ===== -->
+<!-- ===== Dlaczego Veralia ===== -->
     <section id="dlaczego" class="section-dark">
       <div class="container">
         <span class="section-label on-dark reveal">Nasze atuty</span>
-        <h2 class="reveal">Uczymy tak, żeby wiedza została na&nbsp;dłużej</h2>
-        <p class="lead-dark reveal">Łączymy wiedzę, doświadczenie i&nbsp;indywidualne podejście, aby zapewnić uczniom profesjonalne wsparcie na&nbsp;każdym etapie nauki.</p>
+        <h2 class="reveal">Uczymy tak, żeby wiedza została na dłużej</h2>
+        <p class="lead-dark reveal">Łączymy wiedzę, doświadczenie i indywidualne podejście, aby zapewnić uczniom profesjonalne wsparcie na każdym etapie nauki.</p>
         <div class="why-grid reveal">
           <div class="why-tile">
-            <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2 8l10 5 10-5-10-5z"/><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"/><path d="M22 8v6"/></svg></div>
+            <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2 8l10 5 10-5-10-5z"></path><path d="M6 10.5V16c0 1.5 2.7 3 6 3s6-1.5 6-3v-5.5"></path><path d="M22 8v6"></path></svg></div>
             <h3>Wykwalifikowana kadra</h3>
-            <p>Profesjonalni korepetytorzy, którzy łączą wiedzę, kompetencje i&nbsp;zaangażowanie.</p>
+            <p>Profesjonalni korepetytorzy, którzy łączą wiedzę, kompetencje i zaangażowanie.</p>
           </div>
           <div class="why-tile">
-            <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"/><path d="M16 9l1.8 1.8L21 7.3"/></svg></div>
+            <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"></circle><path d="M3 20c0-3.3 2.7-5.5 6-5.5s6 2.2 6 5.5"></path><path d="M16 9l1.8 1.8L21 7.3"></path></svg></div>
             <h3>Indywidualne podejście</h3>
-            <p>Zajęcia dopasowane do&nbsp;poziomu, potrzeb i&nbsp;celów każdego ucznia.</p>
+            <p>Zajęcia dopasowane do poziomu, potrzeb i celów każdego ucznia.</p>
           </div>
           <div class="why-tile">
-            <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="13" rx="1.5"/><path d="M8 21h8M12 17.5V21"/></svg></div>
+            <div class="why-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="4.5" width="19" height="13" rx="1.5"></rect><path d="M8 21h8M12 17.5V21"></path></svg></div>
             <h3>Wygoda nauki online</h3>
-            <p>Ucz się z&nbsp;dowolnego miejsca, bez dojazdów i&nbsp;zbędnego stresu.</p>
+            <p>Ucz się z dowolnego miejsca, bez dojazdów i zbędnego stresu.</p>
           </div>
         </div>
         <div class="section-cta reveal">
-          <a href="o-nas.html" class="link-more">Więcej o&nbsp;nas →</a>
+          <a href="o-nas.html" class="link-more">Więcej o nas →</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== Jak działamy ===== -->
-    <section id="jak-dzialamy">
+<section id="jak-dzialamy">
       <div class="container">
         <span class="section-label reveal">Jak działamy</span>
-        <h2 class="reveal">Cztery kroki do&nbsp;regularnej nauki</h2>
+        <h2 class="reveal">Cztery kroki do regularnej nauki</h2>
         <ol class="steps reveal">
           <li class="step">
             <span class="step-num">01</span>
-            <div class="step-copy"><h3>Wypełnij formularz.</h3><p>Napisz, z&nbsp;jakiego przedmiotu potrzebujesz pomocy, na&nbsp;jakim poziomie i&nbsp;czego oczekujesz.</p></div>
+            <div class="step-copy"><h3>Wypełnij formularz.</h3><p>Napisz, z jakiego przedmiotu potrzebujesz pomocy, na jakim poziomie i czego oczekujesz.</p></div>
           </li>
           <li class="step">
             <span class="step-num">02</span>
-            <div class="step-copy"><h3>Kontakt i&nbsp;dobór korepetytora.</h3><p>Skontaktujemy się z&nbsp;Tobą i&nbsp;dobierzemy korepetytora, biorąc pod&nbsp;uwagę poziom, potrzeby i&nbsp;preferencje.</p></div>
+            <div class="step-copy"><h3>Kontakt i dobór korepetytora.</h3><p>Skontaktujemy się z Tobą i dobierzemy korepetytora, biorąc pod uwagę poziom, potrzeby i preferencje.</p></div>
           </li>
           <li class="step">
             <span class="step-num">03</span>
-            <div class="step-copy"><h3>Pierwsza lekcja.</h3><p>Zaczynasz od&nbsp;jednej lekcji, bez&nbsp;zobowiązań. Trwa pełne 60&nbsp;minut i&nbsp;odbywa się online.</p></div>
+            <div class="step-copy"><h3>Pierwsza lekcja.</h3><p>Zaczynasz od jednej lekcji, bez zobowiązań. Trwa pełne 60 minut i odbywa się online.</p></div>
           </li>
           <li class="step">
             <span class="step-num">04</span>
-            <div class="step-copy"><h3>Regularna nauka.</h3><p>Jeśli wszystko pasuje, uczysz się regularnie, na&nbsp;przykład 1–2 razy w&nbsp;tygodniu. Rodzic może kontaktować się z&nbsp;nami w&nbsp;sprawie postępów.</p></div>
+            <div class="step-copy"><h3>Regularna nauka.</h3><p>Jeśli wszystko pasuje, uczysz się regularnie, na przykład 1–2 razy w tygodniu. Rodzic może kontaktować się z nami w sprawie postępów.</p></div>
           </li>
         </ol>
         <div class="section-cta reveal">
-          <a href="#formularz" class="btn btn-primary">Zapisz się na&nbsp;korepetycje</a>
-          <p class="micro-cta">Dobierzemy korepetytora do&nbsp;Twojego poziomu i&nbsp;potrzeb.</p>
+          <a href="#formularz" class="btn btn-primary">Zapisz się na korepetycje</a>
+          <p class="micro-cta">Dobierzemy korepetytora do Twojego poziomu i potrzeb.</p>
           <a href="jak-dzialamy.html" class="link-more">Zobacz, jak wygląda lekcja →</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== Cennik ===== -->
-    <section id="cennik">
+<section id="cennik">
       <div class="container">
         <span class="section-label reveal">Cennik</span>
-        <h2 class="reveal">Ceny za&nbsp;pełne 60&nbsp;minut zajęć</h2>
+        <h2 class="reveal">Ceny za pełne 60 minut zajęć</h2>
         <div class="price-card card card-float reveal">
           <div class="price-row">
             <div class="price-info">
               <h3>Przedmioty szkolne</h3>
-              <p>Poziom podstawowy · 60&nbsp;min</p>
+              <p>Poziom podstawowy · 60 min</p>
             </div>
             <span class="price-leader" aria-hidden="true"></span>
-            <div class="price-amount">130&nbsp;zł<span>za&nbsp;lekcję</span></div>
+            <div class="price-amount">130 zł<span>za lekcję</span></div>
           </div>
           <div class="price-row">
             <div class="price-info">
               <h3>Poziom rozszerzony</h3>
-              <p>Przedmioty szkolne · 60&nbsp;min</p>
+              <p>Przedmioty szkolne · 60 min</p>
             </div>
             <span class="price-leader" aria-hidden="true"></span>
-            <div class="price-amount">140&nbsp;zł<span>za&nbsp;lekcję</span></div>
+            <div class="price-amount">140 zł<span>za lekcję</span></div>
           </div>
           <div class="price-row">
             <div class="price-info">
               <h3>Języki obce</h3>
-              <p>Angielski, hiszpański, rosyjski · 60&nbsp;min</p>
+              <p>Angielski, hiszpański, rosyjski · 60 min</p>
             </div>
             <span class="price-leader" aria-hidden="true"></span>
-            <div class="price-amount">140&nbsp;zł<span>za&nbsp;lekcję</span></div>
+            <div class="price-amount">140 zł<span>za lekcję</span></div>
           </div>
         </div>
         <div class="price-notes reveal">
           <div class="price-note-item">
-            <span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
-            <p>Bezpłatne odwołanie do&nbsp;24&nbsp;h przed&nbsp;zajęciami.</p>
+            <span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3.5 2"></path></svg></span>
+            <p>Bezpłatne odwołanie do 24 h przed zajęciami.</p>
           </div>
           <div class="price-note-item">
-            <span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v13a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z"/><path d="M8.5 9.5h7M8.5 13h7M8.5 16.5h4"/></svg></span>
-            <p>Na&nbsp;życzenie wystawiamy faktury.</p>
+            <span class="mini-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v13a1 1 0 01-1 1H6a1 1 0 01-1-1V4a1 1 0 011-1z"></path><path d="M8.5 9.5h7M8.5 13h7M8.5 16.5h4"></path></svg></span>
+            <p>Na życzenie wystawiamy faktury.</p>
           </div>
         </div>
         <div class="section-cta reveal">
-          <a href="#formularz" class="btn btn-primary">Zapisz się na&nbsp;pierwszą lekcję</a>
+          <a href="#formularz" class="btn btn-primary">Zapisz się na pierwszą lekcję</a>
           <a href="cennik.html" class="link-more">Pełny cennik →</a>
         </div>
       </div>
     </section>
 
-    <!-- ===== Opinie ===== -->
+<!-- ===== Opinie ===== -->
     <section id="opinie">
       <div class="container">
         <span class="section-label reveal">Opinie</span>
-        <h2 class="reveal">Co mówią uczniowie i&nbsp;rodzice</h2>
+        <h2 class="reveal">Co mówią uczniowie i rodzice</h2>
       </div>
       <div class="reviews-track reveal" id="reviewsTrack" role="region" aria-label="Opinie uczniów, przewijane poziomo">
         <article class="review-card">
           <span class="review-quote-mark" aria-hidden="true">„</span>
           <span class="review-stars" aria-hidden="true">★★★★★</span>
-          <p>Zajęcia były prowadzone w&nbsp;spokojnym tempie, dostosowanym do&nbsp;moich potrzeb. Dzięki temu łatwiej zrozumiałam materiał, z&nbsp;którym wcześniej miałam problem.</p>
-          <span class="review-tag">Przykładowa opinia – podmienimy na&nbsp;prawdziwe</span>
+          <p>Zajęcia były prowadzone w spokojnym tempie, dostosowanym do moich potrzeb. Dzięki temu łatwiej zrozumiałam materiał, z którym wcześniej miałam problem.</p>
+          <span class="review-tag">Przykładowa opinia – podmienimy na prawdziwe</span>
         </article>
         <article class="review-card">
           <span class="review-quote-mark" aria-hidden="true">„</span>
           <span class="review-stars" aria-hidden="true">★★★★★</span>
-          <p>Bardzo wygodna forma nauki — zajęcia online pozwoliły mi&nbsp;uczyć się bez&nbsp;dojazdów, a&nbsp;korepetytor zawsze dobrze przygotowywał materiały.</p>
-          <span class="review-tag">Przykładowa opinia – podmienimy na&nbsp;prawdziwe</span>
+          <p>Bardzo wygodna forma nauki — zajęcia online pozwoliły mi uczyć się bez dojazdów, a korepetytor zawsze dobrze przygotowywał materiały.</p>
+          <span class="review-tag">Przykładowa opinia – podmienimy na prawdziwe</span>
         </article>
         <article class="review-card">
           <span class="review-quote-mark" aria-hidden="true">„</span>
           <span class="review-stars" aria-hidden="true">★★★★★</span>
-          <p>Doceniam indywidualne podejście i&nbsp;to, że mogłam zacząć od&nbsp;jednej lekcji, zanim zdecydowałam się na&nbsp;regularną współpracę.</p>
-          <span class="review-tag">Przykładowa opinia – podmienimy na&nbsp;prawdziwe</span>
+          <p>Doceniam indywidualne podejście i to, że mogłam zacząć od jednej lekcji, zanim zdecydowałam się na regularną współpracę.</p>
+          <span class="review-tag">Przykładowa opinia – podmienimy na prawdziwe</span>
         </article>
       </div>
       <div class="container">
@@ -552,34 +709,39 @@
       </div>
     </section>
 
-    <!-- ===== FAQ ===== -->
+<!-- ===== FAQ ===== -->
     <section id="faq">
       <div class="container">
         <span class="section-label reveal">FAQ</span>
         <h2 class="reveal">Najczęściej zadawane pytania</h2>
-        <p class="lead reveal">Wszystko, co warto wiedzieć przed&nbsp;rozpoczęciem nauki z&nbsp;Veralią. Chcemy, aby rozpoczęcie współpracy z&nbsp;nami było maksymalnie proste i&nbsp;komfortowe.</p>
+        <p class="lead reveal">Wszystko, co warto wiedzieć przed rozpoczęciem nauki z Veralią. Chcemy, aby rozpoczęcie współpracy z nami było maksymalnie proste i komfortowe.</p>
 
         <div class="faq-group reveal">
           <details class="faq-item">
-            <summary>Jak zapisać się na&nbsp;korepetycje?<span class="faq-icon" aria-hidden="true"></span></summary>
-            <p>To bardzo proste! Wystarczy wypełnić formularz zgłoszeniowy dostępny na&nbsp;naszej stronie internetowej, wskazując wybrany przedmiot, poziom nauczania oraz swoje potrzeby. Po&nbsp;otrzymaniu zgłoszenia skontaktujemy się z&nbsp;Tobą, aby ustalić szczegóły, dobrać odpowiedniego korepetytora i&nbsp;zaproponować termin pierwszych zajęć.</p>
+            <summary>Jak zapisać się na korepetycje?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <p>To bardzo proste! Wystarczy wypełnić formularz zgłoszeniowy dostępny na naszej stronie internetowej, wskazując wybrany przedmiot, poziom nauczania oraz swoje potrzeby. Po otrzymaniu zgłoszenia skontaktujemy się z Tobą, aby ustalić szczegóły, dobrać odpowiedniego korepetytora i zaproponować termin pierwszych zajęć.</p>
           </details>
+
           <details class="faq-item">
-            <summary>Z&nbsp;jakich przedmiotów oferujecie korepetycje?<span class="faq-icon" aria-hidden="true"></span></summary>
-            <p>Oferujemy korepetycje online ze&nbsp;wszystkich przedmiotów szkolnych, w&nbsp;tym m.in. matematyki, języka polskiego, fizyki, chemii, biologii, geografii, historii i&nbsp;informatyki. Prowadzimy również zajęcia z&nbsp;języków obcych: angielskiego, hiszpańskiego i&nbsp;rosyjskiego. Pomagamy zarówno w&nbsp;bieżącej nauce, jak i&nbsp;w&nbsp;przygotowaniach do&nbsp;sprawdzianów, egzaminu ósmoklasisty oraz matury na&nbsp;poziomie podstawowym i&nbsp;rozszerzonym.</p>
+            <summary>Z jakich przedmiotów oferujecie korepetycje?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <p>Oferujemy korepetycje online ze wszystkich przedmiotów szkolnych, w tym m.in. matematyki, języka polskiego, fizyki, chemii, biologii, geografii, historii i informatyki. Prowadzimy również zajęcia z języków obcych: angielskiego, hiszpańskiego i rosyjskiego. Pomagamy zarówno w bieżącej nauce, jak i w przygotowaniach do sprawdzianów, egzaminu ósmoklasisty oraz matury na poziomie podstawowym i rozszerzonym.</p>
           </details>
+
           <details class="faq-item">
-            <summary>Czy mogę zapisać się tylko na&nbsp;jedną lekcję?<span class="faq-icon" aria-hidden="true"></span></summary>
-            <p>Tak. Nie musisz od&nbsp;razu deklarować długoterminowej współpracy. Możesz rozpocząć od&nbsp;pojedynczego spotkania, a&nbsp;następnie zdecydować, czy chcesz kontynuować naukę regularnie.</p>
+            <summary>Czy mogę zapisać się tylko na jedną lekcję?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <p>Tak. Nie musisz od razu deklarować długoterminowej współpracy. Możesz rozpocząć od pojedynczego spotkania, a następnie zdecydować, czy chcesz kontynuować naukę regularnie.</p>
           </details>
+
           <details class="faq-item">
             <summary>Czy zajęcia mogą odbywać się regularnie?<span class="faq-icon" aria-hidden="true"></span></summary>
-            <p>Tak. Oferujemy zarówno pojedyncze korepetycje, jak i&nbsp;systematyczne zajęcia, np.&nbsp;raz lub dwa razy w&nbsp;tygodniu. Regularna współpraca pozwala na&nbsp;bieżąco utrwalać wiedzę, monitorować postępy i&nbsp;konsekwentnie realizować cele edukacyjne.</p>
+            <p>Tak. Oferujemy zarówno pojedyncze korepetycje, jak i systematyczne zajęcia, np. raz lub dwa razy w tygodniu. Regularna współpraca pozwala na bieżąco utrwalać wiedzę, monitorować postępy i konsekwentnie realizować cele edukacyjne.</p>
           </details>
+
           <details class="faq-item">
-            <summary>Czy pomagacie w&nbsp;przygotowaniach do&nbsp;egzaminu ósmoklasisty i&nbsp;matury?<span class="faq-icon" aria-hidden="true"></span></summary>
-            <p>Tak. Oferujemy zajęcia przygotowujące do&nbsp;egzaminu ósmoklasisty oraz matury na&nbsp;poziomie podstawowym i&nbsp;rozszerzonym. Podczas przygotowań koncentrujemy się na&nbsp;wymaganiach egzaminacyjnych, typowych zadaniach, strategiach ich rozwiązywania oraz obszarach, które wymagają dodatkowego utrwalenia.</p>
+            <summary>Czy pomagacie w przygotowaniach do egzaminu ósmoklasisty i matury?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <p>Tak. Oferujemy zajęcia przygotowujące do egzaminu ósmoklasisty oraz matury na poziomie podstawowym i rozszerzonym. Podczas przygotowań koncentrujemy się na wymaganiach egzaminacyjnych, typowych zadaniach, strategiach ich rozwiązywania oraz obszarach, które wymagają dodatkowego utrwalenia.</p>
           </details>
+
         </div>
         <div class="section-cta reveal">
           <a href="faq.html" class="link-more">Wszystkie pytania →</a>
@@ -587,17 +749,17 @@
       </div>
     </section>
 
-    <!-- ===== Formularz ===== -->
+<!-- ===== Formularz ===== -->
     <section id="formularz" class="section-dark">
       <div class="container form-grid">
         <div class="form-intro reveal">
           <span class="section-label on-dark">Formularz</span>
-          <h2>Zacznij od&nbsp;jednej lekcji</h2>
-          <p class="lead">Wypełnij krótki formularz, a&nbsp;skontaktujemy się z&nbsp;Tobą, aby ustalić szczegóły.</p>
+          <h2>Zacznij od jednej lekcji</h2>
+          <p class="lead">Wypełnij krótki formularz, a skontaktujemy się z Tobą, aby ustalić szczegóły.</p>
           <ul class="form-points">
-            <li><span class="check" aria-hidden="true">✓</span>Możesz zacząć od&nbsp;jednej lekcji, bez&nbsp;zobowiązań.</li>
-            <li><span class="check" aria-hidden="true">✓</span>Dobierzemy korepetytora do&nbsp;Twojego poziomu i&nbsp;potrzeb.</li>
-            <li><span class="check" aria-hidden="true">✓</span>Bezpłatne odwołanie najpóźniej 24&nbsp;godziny przed&nbsp;zajęciami.</li>
+            <li><span class="check" aria-hidden="true">✓</span>Możesz zacząć od jednej lekcji, bez zobowiązań.</li>
+            <li><span class="check" aria-hidden="true">✓</span>Dobierzemy korepetytora do Twojego poziomu i potrzeb.</li>
+            <li><span class="check" aria-hidden="true">✓</span>Bezpłatne odwołanie najpóźniej 24 godziny przed zajęciami.</li>
           </ul>
           <div class="form-contact">
             <a href="mailto:veralia.szkolakorepetycji@gmail.com">veralia.szkolakorepetycji@gmail.com</a>
@@ -613,16 +775,7 @@
         </div>
 
         <div class="form-wrap reveal">
-          <!--
-            Pokazówka: formularz nie wysyła danych na żaden serwer, tylko symuluje sukces w JS (main.js, handleSubmit).
-            Żeby podpiąć realną wysyłkę np. przez Formspree (https://formspree.io):
-            1. dodaj do <form> poniżej: action="https://formspree.io/f/TWÓJ_ID" method="POST"
-            2. w main.js, w handleSubmit, zamiast od razu pokazywać sukces, wyślij dane przez
-               fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } })
-               i dopiero w .then() pokaż stan sukcesu (albo błąd wysyłki).
-            Walidacja pól działa tak samo przed wysyłką, nie trzeba jej zmieniać.
-          -->
-          <form id="signupForm" class="signup-form" novalidate>
+          <form id="signupForm" class="signup-form" action="/api/kontakt" method="POST" novalidate>
             <div class="form-field">
               <label for="f-name">Imię i&nbsp;nazwisko</label>
               <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Wpisz imię i nazwisko" required aria-describedby="f-name-err">
@@ -684,20 +837,27 @@
             <div class="form-field">
               <label class="checkbox-field">
                 <input type="checkbox" id="f-rodo" name="rodo" required aria-describedby="f-rodo-err">
-                <span>Zapoznałem/am się z&nbsp;<a href="#">informacjami dotyczącymi przetwarzania danych osobowych</a>.</span>
+                <span>Zapoznałem/am się z&nbsp;<a href="polityka-prywatnosci.html">informacjami dotyczącymi przetwarzania danych osobowych</a>.</span>
               </label>
               <p class="field-error" id="f-rodo-err" role="alert"></p>
+            </div>
+
+            <!-- Pułapka na boty: pole niewidoczne dla ludzi, wypełniają je tylko automaty -->
+            <div class="form-hp" aria-hidden="true" style="position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden">
+              <label for="f-website">Nie wypełniaj tego pola</label>
+              <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off">
             </div>
 
             <button type="submit" class="btn btn-primary form-submit" id="formSubmitBtn">
               <span class="btn-label">Wyślij zgłoszenie</span>
               <span class="spinner" aria-hidden="true"></span>
             </button>
+            <p class="field-error form-send-error" id="formSendErr" role="alert" hidden></p>
           </form>
 
           <div class="form-success" id="formSuccess" hidden tabindex="-1">
             <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M7.5 12.5l3 3 6-6.5"/></svg>
-            <p>Dziękujemy, zgłoszenie dotarło. Skontaktujemy się z&nbsp;Tobą, aby ustalić szczegóły, dobrać korepetytora i&nbsp;zaproponować termin pierwszych zajęć.</p>
+            <p>Dziękujemy, zgłoszenie dotarło. Skontaktujemy się z Tobą, aby ustalić szczegóły, dobrać korepetytora i zaproponować termin pierwszych zajęć.</p>
           </div>
 
           <p class="form-contact-note">Masz pytania? Napisz: <a href="mailto:veralia.szkolakorepetycji@gmail.com">veralia.szkolakorepetycji@gmail.com</a></p>
@@ -705,9 +865,10 @@
       </div>
     </section>
 
-  </main>
 
-  <!-- ===== Stopka ===== -->
+
+  </main>
+<!-- ===== Stopka ===== -->
   <footer id="kontakt">
     <div class="container footer-grid">
       <div class="footer-brand">
@@ -762,45 +923,14 @@
     </div>
     <div class="container footer-bottom">
       <p>© 2026 Veralia</p>
-      <p>Projekt i&nbsp;wykonanie: NBK Projects</p>
+      <p>Projekt i wykonanie: NBK Projects</p>
     </div>
   </footer>
-
-  <!-- Dolny pasek mobilny -->
+<!-- Dolny pasek mobilny -->
   <div class="mobile-sticky-bar" id="mobileStickyBar">
     <a href="kontakt.html#formularz" class="btn btn-primary">Zapisz się</a>
   </div>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type":"Question","name":"Jak zapisać się na korepetycje?","acceptedAnswer":{"@type":"Answer","text":"To bardzo proste! Wystarczy wypełnić formularz zgłoszeniowy dostępny na naszej stronie internetowej, wskazując wybrany przedmiot, poziom nauczania oraz swoje potrzeby. Po otrzymaniu zgłoszenia skontaktujemy się z Tobą, aby ustalić szczegóły, dobrać odpowiedniego korepetytora i zaproponować termin pierwszych zajęć."}},
-      {"@type":"Question","name":"Z jakich przedmiotów oferujecie korepetycje?","acceptedAnswer":{"@type":"Answer","text":"Oferujemy korepetycje online ze wszystkich przedmiotów szkolnych, w tym m.in. matematyki, języka polskiego, fizyki, chemii, biologii, geografii, historii i informatyki. Prowadzimy również zajęcia z języków obcych: angielskiego, hiszpańskiego i rosyjskiego. Pomagamy zarówno w bieżącej nauce, jak i w przygotowaniach do sprawdzianów, egzaminu ósmoklasisty oraz matury na poziomie podstawowym i rozszerzonym."}},
-      {"@type":"Question","name":"Czy mogę zapisać się tylko na jedną lekcję?","acceptedAnswer":{"@type":"Answer","text":"Tak. Nie musisz od razu deklarować długoterminowej współpracy. Możesz rozpocząć od pojedynczego spotkania, a następnie zdecydować, czy chcesz kontynuować naukę regularnie."}},
-      {"@type":"Question","name":"Czy zajęcia mogą odbywać się regularnie?","acceptedAnswer":{"@type":"Answer","text":"Tak. Oferujemy zarówno pojedyncze korepetycje, jak i systematyczne zajęcia, np. raz lub dwa razy w tygodniu. Regularna współpraca pozwala na bieżąco utrwalać wiedzę, monitorować postępy i konsekwentnie realizować cele edukacyjne."}},
-      {"@type":"Question","name":"Czy pomagacie w przygotowaniach do egzaminu ósmoklasisty i matury?","acceptedAnswer":{"@type":"Answer","text":"Tak. Oferujemy zajęcia przygotowujące do egzaminu ósmoklasisty oraz matury na poziomie podstawowym i rozszerzonym. Podczas przygotowań koncentrujemy się na wymaganiach egzaminacyjnych, typowych zadaniach, strategiach ich rozwiązywania oraz obszarach, które wymagają dodatkowego utrwalenia."}},
-      {"@type":"Question","name":"Czy pomagacie również uczniom mającym duże zaległości?","acceptedAnswer":{"@type":"Answer","text":"Jak najbardziej. Nasze korepetycje są przeznaczone zarówno dla uczniów, którzy chcą poprawić bieżące wyniki, jak i dla osób potrzebujących bardziej kompleksowego wsparcia. Korepetytor dostosowuje tempo nauki do aktualnych umiejętności ucznia, pomagając stopniowo uporządkować i zrozumieć materiał."}},
-      {"@type":"Question","name":"Czy otrzymam potwierdzenie zapisu?","acceptedAnswer":{"@type":"Answer","text":"Tak. Po przesłaniu formularza otrzymasz potwierdzenie zgłoszenia, a następnie skontaktujemy się z Tobą w celu ustalenia szczegółów. Po uzgodnieniu terminu prześlemy również informacje organizacyjne dotyczące pierwszej lekcji."}},
-      {"@type":"Question","name":"Nie wiem, jakie zajęcia będą najlepsze. Czy pomożecie mi wybrać?","acceptedAnswer":{"@type":"Answer","text":"Oczywiście! Jeśli nie masz pewności, jakiego rodzaju wsparcia potrzebujesz, skontaktuj się z nami. Pomożemy określić potrzeby edukacyjne i dobrać odpowiednie zajęcia."}},
-      {"@type":"Question","name":"Czy zajęcia prowadzą wykwalifikowani korepetytorzy?","acceptedAnswer":{"@type":"Answer","text":"Tak. W Veralii stawiamy na współpracę z profesjonalną kadrą korepetytorów, którzy posiadają odpowiednią wiedzę merytoryczną oraz kompetencje pozwalające skutecznie przekazywać ją uczniom. Zależy nam nie tylko na wysokim poziomie nauczania, ale także na zaangażowaniu, cierpliwości i umiejętności dostosowania sposobu pracy do indywidualnych potrzeb ucznia."}},
-      {"@type":"Question","name":"Czy zajęcia są indywidualne?","acceptedAnswer":{"@type":"Answer","text":"Tak. Oferujemy indywidualne korepetycje w formule 1:1, dzięki którym cała uwaga korepetytora skupiona jest na jednym uczniu. Pozwala to dostosować tempo pracy, zakres materiału i metody nauczania do konkretnych potrzeb oraz celów edukacyjnych."}},
-      {"@type":"Question","name":"Ile trwa jedna lekcja?","acceptedAnswer":{"@type":"Answer","text":"Każda lekcja w Veralii trwa pełne 60 minut. Wierzymy, że odpowiednia ilość czasu pozwala nie tylko dokładnie omówić materiał, ale również przećwiczyć nowe zagadnienia i rozwiać ewentualne wątpliwości."}},
-      {"@type":"Question","name":"Jak odbywają się zajęcia online?","acceptedAnswer":{"@type":"Answer","text":"Zajęcia prowadzone są w formie spotkań online z wykorzystaniem platformy umożliwiającej kontakt z korepetytorem w czasie rzeczywistym. Przed pierwszą lekcją otrzymasz wszystkie niezbędne informacje dotyczące sposobu połączenia. Podczas spotkania korepetytor może korzystać m.in. z tablicy interaktywnej, prezentacji, materiałów edukacyjnych oraz wspólnie rozwiązywanych zadań."}},
-      {"@type":"Question","name":"Czy muszę posiadać specjalny sprzęt?","acceptedAnswer":{"@type":"Answer","text":"Nie. Wystarczy komputer lub tablet ze stabilnym połączeniem internetowym, mikrofonem oraz możliwością uczestniczenia w spotkaniu online. Zalecamy korzystanie ze słuchawek, aby zapewnić większy komfort podczas zajęć."}},
-      {"@type":"Question","name":"Czy mogę wybrać korepetytora?","acceptedAnswer":{"@type":"Answer","text":"Zależy nam na tym, aby współpraca była komfortowa i skuteczna, dlatego przy doborze nauczyciela uwzględniamy poziom nauczania, potrzeby ucznia oraz jego preferencje. Jeśli zależy Ci na konkretnym sposobie prowadzenia zajęć, poinformuj nas o tym podczas zgłoszenia."}},
-      {"@type":"Question","name":"Czy mogę zmienić korepetytora w trakcie współpracy?","acceptedAnswer":{"@type":"Answer","text":"Oczywiście. Rozumiemy, że odpowiednie dopasowanie korepetytora ma ogromne znaczenie dla komfortu i efektywności nauki. Jeżeli z jakiegokolwiek powodu współpraca nie będzie spełniała Twoich oczekiwań, skontaktuj się z nami. Postaramy się zaproponować inne rozwiązanie lub zmianę nauczyciela, zależnie od dostępności naszej kadry."}},
-      {"@type":"Question","name":"Czy mogę odwołać lub przełożyć zajęcia?","acceptedAnswer":{"@type":"Answer","text":"Tak. Rozumiemy, że mogą wystąpić nieprzewidziane sytuacje. Prosimy o możliwie wcześniejsze informowanie nas o konieczności zmiany terminu. Szczegółowe zasady odwoływania i przekładania lekcji znajdują się w sekcji „Zasady zajęć”."}},
-      {"@type":"Question","name":"Czy mogę przesłać materiały lub zadania przed zajęciami?","acceptedAnswer":{"@type":"Answer","text":"Oczywiście. Zachęcamy do wcześniejszego przesyłania materiałów, tematów oraz zagadnień, które mają zostać omówione podczas lekcji. Dzięki temu korepetytor może lepiej przygotować zajęcia i efektywnie wykorzystać wspólny czas."}},
-      {"@type":"Question","name":"Ile kosztują korepetycje?","acceptedAnswer":{"@type":"Answer","text":"Nasz cennik jest przejrzysty i zależy od rodzaju zajęć: korepetycje z przedmiotów szkolnych — 130 zł / 60 minut, korepetycje na poziomie rozszerzonym — 140 zł / 60 minut, język angielski, hiszpański i rosyjski — 140 zł / 60 minut. Cena obejmuje indywidualną, 60-minutową lekcję online."}},
-      {"@type":"Question","name":"Jak wygląda płatność za korepetycje?","acceptedAnswer":{"@type":"Answer","text":"Płatności za zajęcia dokonywane są bezpośrednio na rzecz Veralii. Po ustaleniu szczegółów współpracy przekazujemy informacje dotyczące terminu oraz sposobu opłacenia zajęć."}},
-      {"@type":"Question","name":"Czy wystawiacie faktury?","acceptedAnswer":{"@type":"Answer","text":"Tak. Na życzenie klienta wystawiamy fakturę zgodnie z obowiązującymi przepisami."}},
-      {"@type":"Question","name":"Czy rodzic może kontaktować się z Wami w sprawie postępów dziecka?","acceptedAnswer":{"@type":"Answer","text":"Tak. Zależy nam na dobrej komunikacji i partnerskiej współpracy z rodzicami. W przypadku uczniów niepełnoletnich rodzic lub opiekun prawny może kontaktować się z nami w sprawach organizacyjnych oraz dotyczących przebiegu nauki i potrzeb edukacyjnych dziecka."}}
-    ]
-  }
-  </script>
-
   <script src="js/main.js?v=7"></script>
+
 </body>
 </html>

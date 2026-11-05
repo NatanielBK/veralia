@@ -101,6 +101,24 @@
   src: url("../fonts/jost-600-latin-ext.woff2") format("woff2");
   unicode-range: U+0100-024F, U+0300-0304, U+0308, U+0329, U+1E00-1EFF, U+2020;
 }
+/* Zastępcze czcionki dociągnięte do szerokości właściwych (zmierzone na polskim tekście),
+   żeby po wczytaniu fontu nagłówki nie zmieniały liczby linii i treść nie skakała (CLS). */
+@font-face {
+  font-family: "Cormorant zastepczy";
+  src: local("Times New Roman"), local("Times"), local("Liberation Serif");
+  size-adjust: 95%;
+}
+@font-face {
+  font-family: "Cormorant zastepczy";
+  font-style: italic;
+  src: local("Times New Roman Italic"), local("TimesNewRomanPS-ItalicMT"), local("Times-Italic"), local("Liberation Serif Italic");
+  size-adjust: 87%;
+}
+@font-face {
+  font-family: "Jost zastepczy";
+  src: local("Arial"), local("Helvetica"), local("Liberation Sans");
+  size-adjust: 95.5%;
+}
 
 /* ---------- Tokeny ---------- */
 :root {
@@ -108,7 +126,7 @@
   --paper: #FFFDF9;
   --sand: #EFE6DA;
   --line: #E3D5C3;
-  --bronze: #8C6A4F;
+  --bronze: #87654A; /* minimalnie ciemniej niż #8C6A4F: tekst na kremowym tle ma 4,77:1 (WCAG AA) */
   --bronze-dark: #6B4F3A;
   --ink: #3A2E26;
   --muted: #6E5F53;
@@ -119,8 +137,8 @@
   --error: #A33A2C;
   --success: #4F6B53;
 
-  --font-serif: "Cormorant Garamond", Georgia, serif;
-  --font-sans: "Jost", Arial, sans-serif;
+  --font-serif: "Cormorant Garamond", "Cormorant zastepczy", Georgia, serif;
+  --font-sans: "Jost", "Jost zastepczy", Arial, sans-serif;
 
   --space-xs: 0.5rem;
   --space-sm: 1rem;
@@ -156,6 +174,8 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  /* Cormorant ma domyślnie cyfry nautyczne: „130 zł” czytało się jak „13o” */
+  font-variant-numeric: lining-nums;
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
@@ -414,7 +434,22 @@ em, i.accent, .italic-accent {
     min-height: 44px;
     padding: 0.4rem 0;
     white-space: nowrap;
+    position: relative;
+    transition: color .2s ease;
   }
+  /* cienka kreska pod linkiem po najechaniu (wcześniej menu nie reagowało na kursor) */
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0.55rem;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .3s ease;
+  }
+  .nav-link:hover { color: var(--bronze-dark); }
+  .nav-link:hover::after { transform: scaleX(1); }
   .nav-link[aria-current="page"] { color: var(--bronze-dark); font-weight: 600; }
   .hamburger, .mobile-menu-trigger { display: none; }
 }
@@ -734,7 +769,8 @@ html:not(.js) .mobile-menu-trigger { display: none; }
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
-    max-width: var(--container);
+    /* ta sama linia co logo i sekcje (.container ma wewnętrzny odstęp) */
+    max-width: calc(var(--container) - 2 * var(--space-md));
     margin: 0 auto;
     gap: var(--space-2xl);
   }
@@ -782,6 +818,12 @@ section > .container > h2 { margin-bottom: 2.25rem; max-width: 24ch; }
   color: var(--bronze);
   font-weight: 500;
   white-space: nowrap;
+}
+.subject-block-desc {
+  max-width: 62ch;
+  margin: 0 0 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
 }
 .subject-cta {
   margin-top: 1.5rem;
@@ -905,6 +947,8 @@ section > .container > h2 { margin-bottom: 2.25rem; max-width: 24ch; }
 .micro-cta { margin-top: 0.75rem; font-size: 0.875rem; color: var(--muted); }
 @media (min-width: 1024px) {
   .section-cta .btn { width: auto; }
+  /* przycisk i link obok siebie stykały się (sam odstęp między wyrazami) */
+  .section-cta .btn + .link-more { margin-left: 1.75rem; }
 }
 
 /* ============================================================
@@ -1223,9 +1267,11 @@ section > .container > h2 { margin-bottom: 2.25rem; max-width: 24ch; }
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 2.5rem;
-  line-height: 1;
+  /* „ siedzi na linii bazowej, więc przy line-height: 1 wchodził na gwiazdki */
+  height: 1.5rem;
+  line-height: 0;
   color: var(--line);
-  margin-bottom: -0.5rem;
+  margin-bottom: 0.5rem;
 }
 .review-card p { color: var(--ink); margin-bottom: 1rem; }
 .review-tag {
@@ -1242,7 +1288,11 @@ section > .container > h2 { margin-bottom: 2.25rem; max-width: 24ch; }
 .reviews-hint { text-align: center; color: var(--muted); font-size: 0.8125rem; margin-top: 0.5rem; }
 .reviews-arrows { display: none; }
 @media (min-width: 1024px) {
-  .reviews-track { display: grid; grid-template-columns: repeat(3, 1fr); overflow: visible; padding: 0.5rem 0 1.5rem; }
+  .reviews-track {
+    display: grid; grid-template-columns: repeat(3, 1fr); overflow: visible;
+    /* w szerokości treści, jak .levels-track (wcześniej karty dochodziły do krawędzi ekranu) */
+    max-width: var(--container); margin: 0 auto; padding: 0.5rem var(--space-md) 1.5rem;
+  }
   .review-card { width: auto; max-width: none; }
   .reviews-hint { display: none; }
   .reviews-arrows {
@@ -1283,6 +1333,7 @@ section > .container > h2 { margin-bottom: 2.25rem; max-width: 24ch; }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.14em;
+  line-height: inherit;
   color: var(--bronze);
   margin-bottom: 0.75rem;
 }
@@ -1318,6 +1369,7 @@ section > .container > h2 { margin-bottom: 2.25rem; max-width: 24ch; }
    FORMULARZ (sekcja espresso)
    ============================================================ */
 .form-grid { display: flex; flex-direction: column; gap: var(--space-xl); }
+.form-intro .section-label { display: flex; margin-bottom: 0.75rem; } /* odstęp jak w pozostałych sekcjach */
 .form-intro h2 { color: #fff; }
 .form-intro .lead { color: var(--espresso-muted); margin-top: 0.75rem; }
 .form-points { list-style: none; margin: 1.5rem 0; padding: 0; display: flex; flex-direction: column; gap: 0.75rem; }
@@ -1400,6 +1452,7 @@ fieldset.form-field { border: none; padding: 0; margin: 0 0 1.1rem; }
 .checkbox-field span { padding: 0; line-height: 1.4; }
 .checkbox-field a { color: var(--bronze-dark); text-decoration: underline; overflow-wrap: anywhere; padding: 1px 0; }
 .field-error { color: #A33A2C; font-size: 0.8125rem; margin-top: 0.35rem; min-height: 0; }
+.form-send-error { margin-top: 0.75rem; text-align: center; }
 .has-error input, .has-error select, .has-error textarea { border-color: #A33A2C; }
 .form-submit { width: 100%; position: relative; }
 .form-submit .spinner {
@@ -1554,6 +1607,7 @@ footer#kontakt {
 
 .subject-section { padding: var(--space-lg) 0; }
 .subject-section.alt { background: var(--sand); }
+.subject-section.alt .section-label { color: var(--bronze-dark); } /* brąz na piaskowym tle miał 4,26:1, ciemny 6,1:1 */
 .subject-section h2 { margin-bottom: 1.25rem; }
 .subject-note { margin-top: 1rem; font-family: var(--font-serif); font-style: italic; color: var(--muted); }
 
@@ -1638,7 +1692,8 @@ html:not(.js) .tab-panel-title { display: block; }
 }
 
 @media (min-width: 1024px) {
-  .subject-hero { text-align: left; padding: 9.5rem var(--space-md) var(--space-2xl); }
+  /* góra jak w .page-hero-v4 pozostałych podstron: 50 px od okruszków (9.5rem dawało 150 px pustki) */
+  .subject-hero { text-align: left; padding: 3.125rem var(--space-md) var(--space-2xl); }
   .subject-hero-inner {
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
@@ -1834,6 +1889,9 @@ mark.todo { box-shadow: none; border-bottom: 1px dashed var(--bronze); border-ra
 
 /* A2: cena w karcie poziomu — etykieta po lewej, cena Cormorant po prawej */
 .level-price { justify-content: space-between; }
+/* cena zawsze na dole karty, w jednej linii we wszystkich kartach (krótszy opis podnosił ją wyżej) */
+.levels-grid .level-card { display: flex; flex-direction: column; }
+.levels-grid .level-price { margin-top: auto; }
 .level-price-label { color: var(--muted); font-size: 0.875rem; }
 .level-price-amount { font-family: var(--font-serif); font-weight: 600; font-size: 1.6rem; color: var(--bronze-dark); }
 
@@ -1986,9 +2044,15 @@ mark.todo { box-shadow: none; border-bottom: 1px dashed var(--bronze); border-ra
 @media (min-width: 640px) {
   .table-wrap { display: block; }
   .price-mobile-list { display: none; }
+  .price-mobile-caption span { display: none; } /* „podst. / rozsz.” dubluje nagłówki tabeli */
 }
 
-.price-includes { display: grid; gap: 0.6rem; padding-left: 1.2rem; color: var(--ink); max-width: 68ch; }
+.price-includes { display: grid; gap: 0.6rem; color: var(--ink); max-width: 68ch; }
+/* kreska jak w kartach „Jak wygląda rozliczenie” (było samo wcięcie bez znacznika) */
+.price-includes li { position: relative; padding-left: 1.1rem; }
+.price-includes li::before {
+  content: ""; position: absolute; left: 0; top: 0.72em; width: 7px; height: 1px; background: var(--bronze);
+}
 
 /* Płatności i odwołania: 3 karty z listą zamiast ściany tekstu */
 .policy-cards { display: grid; gap: 1rem; margin: 1.5rem 0; }
@@ -2081,6 +2145,7 @@ mark.todo { box-shadow: none; border-bottom: 1px dashed var(--bronze); border-ra
   border-bottom: 1px solid currentColor;
 }
 .link-more:hover { opacity: .75; }
+.section-dark .link-more { color: #D9B98C; } /* jak etykiety na ciemnym tle; brąz miał tu 1,9:1 */
 .subject-cta .link-more { margin-left: .5rem; }
 
 /* === v4 etap 4b: blog (lista + artykuł) === */

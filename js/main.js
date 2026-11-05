@@ -208,7 +208,7 @@
     }
   }
 
-  /* ---------- Formularz "Zapisz się" — walidacja i pokazowa wysyłka ---------- */
+  /* ---------- Formularz "Zapisz się" — walidacja i wysyłka ---------- */
   var form = document.getElementById("signupForm");
   if (form) {
     var successBox = document.getElementById("formSuccess");
@@ -301,22 +301,44 @@
         return;
       }
 
-      // Pokazówka: brak backendu — patrz komentarz w index.html nad <form> o podpięciu Formspree.
+      // Wysyłka do functions/api/kontakt.js (Cloudflare Pages Functions).
+      var sendErr = document.getElementById("formSendErr");
+      if (sendErr) { sendErr.hidden = true; sendErr.textContent = ""; }
       if (submitBtn) {
         submitBtn.classList.add("is-loading");
         submitBtn.disabled = true;
       }
-      window.setTimeout(function () {
-        form.hidden = true;
+      function stopLoading() {
         if (submitBtn) {
           submitBtn.classList.remove("is-loading");
           submitBtn.disabled = false;
         }
+      }
+      fetch(form.getAttribute("action"), {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      }).then(function (res) {
+        return res.json().catch(function () { return {}; }).then(function (data) {
+          if (!res.ok || !data.ok) throw { serverMessage: data.blad };
+        });
+      }).then(function () {
+        stopLoading();
+        form.hidden = true;
         if (successBox) {
           successBox.hidden = false;
           successBox.focus();
         }
-      }, 900);
+      }).catch(function (err) {
+        stopLoading();
+        if (window.turnstile) { try { window.turnstile.reset(); } catch (e2) {} }
+        if (sendErr) {
+          // komunikat z serwera (po polsku) albo ogólny — np. brak sieci
+          sendErr.textContent = (err && err.serverMessage) ||
+            "Nie udało się wysłać zgłoszenia. Spróbuj ponownie za chwilę albo napisz do nas mailem.";
+          sendErr.hidden = false;
+        }
+      });
     });
   }
 
