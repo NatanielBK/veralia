@@ -2195,6 +2195,17 @@ mark.todo { box-shadow: none; border-bottom: 1px dashed var(--bronze); border-ra
   overflow-wrap: anywhere;
 }
 .kontakt-rows a:hover { background: var(--sand); }
+/* wiersze z ikonami nie dostają kreski z .policy-card ul li */
+.policy-card ul.kontakt-rows li { padding-left: 0; }
+.policy-card ul.kontakt-rows li::before { content: none; }
+.kontakt-rows a { margin-left: -0.75rem; overflow-wrap: break-word; }
+.policy-card ul.kontakt-rows { gap: 0.15rem; }
+.kontakt-rows svg[width="18"] { margin: 0 1px; }
+.kontakt-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.35rem 0.6rem; }
+@media (max-width: 599px) {
+  .kontakt-links { flex-direction: column; gap: 0; }
+  .kontakt-links .sep { display: none; }
+}
 .kontakt-rows svg { flex-shrink: 0; color: var(--bronze-dark); }
 @media (min-width: 768px) {
   .kontakt-extra { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
