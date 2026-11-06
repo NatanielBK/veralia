@@ -747,6 +747,10 @@ html:not(.js) .mobile-menu-trigger { display: none; }
   border-radius: 999px;
   box-shadow: var(--shadow-float);
 }
+/* telefon i tablet: zdjęcie sięga prawie do krawędzi ekranu, więc plakietka wchodzi głębiej na zdjęcie */
+@media (max-width: 1023px) {
+  .hero-chip { right: -0.35rem; top: 24%; }
+}
 
 .hero-facts {
   margin-top: var(--space-lg);
