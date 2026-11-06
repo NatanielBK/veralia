@@ -421,21 +421,148 @@
     document.getElementById("reviewNext")
   );
 
-  /* ---------- FAQ: filtr kategorii ---------- */
-  var faqFilters = document.querySelector(".faq-filters");
-  if (faqFilters) {
-    var filterButtons = faqFilters.querySelectorAll("button");
-    var faqGroups = document.querySelectorAll(".faq-group");
-    faqFilters.addEventListener("click", function (e) {
-      var btn = e.target.closest("button");
-      if (!btn) return;
-      var filter = btn.getAttribute("data-filter");
-      filterButtons.forEach(function (b) { b.setAttribute("aria-pressed", String(b === btn)); });
-      faqGroups.forEach(function (group) {
-        var show = filter === "all" || group.getAttribute("data-cat") === filter;
-        group.hidden = !show;
-      });
+  /* ---------- FAQ: wyszukiwarka + filtr kategorii (jeden stan) ----------
+     Słowa szukane w pytaniach i odpowiedziach, bez polskich znaków i wielkości liter,
+     po rdzeniu (faktura / faktury / fakturę → faktur). Kilka słów: najpierw wszystkie
+     naraz, a gdy nic nie pasuje — którekolwiek. Trafienia podświetlone <mark>. */
+  var faqFull = document.querySelector(".faq-full");
+  if (faqFull) {
+    var faqInput = document.getElementById("faqSearch");
+    var faqEmpty = document.getElementById("faqEmpty");
+    var faqStatus = document.getElementById("faqStatus");
+    var faqOther = faqFull.querySelector("[data-faq-other]");
+    var filterButtons = faqFull.querySelectorAll(".faq-filters button");
+    var faqGroups = faqFull.querySelectorAll(".faq-group");
+    var faqCat = "all";
+
+    // Normalizacja znak po znaku (długość bez zmian, więc indeksy pasują do oryginału)
+    var normChar = function (c) {
+      var l = c.toLowerCase();
+      if (l === "ł") return "l";
+      var n = l.normalize ? l.normalize("NFD").replace(/[̀-ͯ]/g, "") : l;
+      return n.length === 1 ? n : l;
+    };
+    var norm = function (s) { return s.split("").map(normChar).join(""); };
+
+    // Końcówki odcinane od słowa (najdłuższe najpierw); rdzeń ma co najmniej 4 znaki
+    var KONCOWKI = ["owania", "owanie", "ywania", "ywanie", "iwania", "iwanie",
+      "ości", "ość", "ania", "anie", "enia", "enie", "ować", "ywać",
+      "ami", "ach", "ego", "emu", "ymi", "imi", "ych", "ich", "owi", "ują", "uje",
+      "ów", "om", "ej", "ie", "ać", "eć", "ić", "yć",
+      "a", "ą", "e", "ę", "i", "o", "u", "y"];
+    var POMIJANE = ["na", "do", "ze", "we", "się", "sie", "czy", "to", "jest", "po", "za", "od", "co", "jak", "mi", "nie"];
+    var rdzen = function (w) {
+      for (var i = 0; i < KONCOWKI.length; i++) {
+        var k = KONCOWKI[i];
+        if (w.length - k.length >= 4 && w.slice(-k.length) === k) return w.slice(0, -k.length);
+      }
+      return w;
+    };
+    var termsOf = function (q) {
+      var words = q.toLowerCase().split(/[^0-9a-ząćęłńóśźżà-ÿ]+/).filter(function (w) { return w.length > 1; });
+      var meaningful = words.filter(function (w) { return POMIJANE.indexOf(w) === -1; });
+      if (meaningful.length) words = meaningful;
+      return words.map(function (w) { return norm(rdzen(w)); })
+        .filter(function (t, i, a) { return a.indexOf(t) === i; });
+    };
+    var WORD = /[0-9a-z]+/g;
+    var wordsOf = function (normText) { return normText.match(WORD) || []; };
+    var hasTerm = function (words, t) {
+      for (var i = 0; i < words.length; i++) if (words[i].indexOf(t) === 0) return true;
+      return false;
+    };
+
+    // Pytania: oryginalny HTML (do zdejmowania podświetleń) i słowa do szukania
+    var faqItems = Array.prototype.map.call(faqFull.querySelectorAll(".faq-item"), function (el) {
+      var parts = [el.querySelector("summary")].concat(Array.prototype.slice.call(el.children, 1));
+      return {
+        el: el,
+        group: el.closest(".faq-group"),
+        parts: parts,
+        html: parts.map(function (p) { return p.innerHTML; }),
+        words: wordsOf(norm(el.textContent))
+      };
     });
+
+    var highlight = function (root, terms) {
+      var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, null);
+      var nodes = [];
+      while (walker.nextNode()) nodes.push(walker.currentNode);
+      nodes.forEach(function (node) {
+        var text = node.nodeValue, n = norm(text), m, last = 0, frag = null;
+        WORD.lastIndex = 0;
+        while ((m = WORD.exec(n))) {
+          var w = m[0];
+          if (!terms.some(function (t) { return w.indexOf(t) === 0; })) continue;
+          frag = frag || document.createDocumentFragment();
+          frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+          var mark = document.createElement("mark");
+          mark.textContent = text.slice(m.index, m.index + w.length);
+          frag.appendChild(mark);
+          last = m.index + w.length;
+        }
+        if (!frag) return;
+        frag.appendChild(document.createTextNode(text.slice(last)));
+        node.parentNode.replaceChild(frag, node);
+      });
+    };
+
+    var odmiana = function (n) {
+      if (n === 1) return "1 pytanie";
+      var d = n % 10, s = n % 100;
+      return n + (d >= 2 && d <= 4 && (s < 12 || s > 14) ? " pytania" : " pytań");
+    };
+
+    var applyFaq = function () {
+      var terms = termsOf(faqInput ? faqInput.value : "");
+      var matchAll = function (it) { return terms.every(function (t) { return hasTerm(it.words, t); }); };
+      var matchAny = function (it) { return terms.some(function (t) { return hasTerm(it.words, t); }); };
+      var test = matchAll;
+      if (terms.length > 1 && !faqItems.some(matchAll)) test = matchAny;
+
+      var shown = 0, elsewhere = 0;
+      faqItems.forEach(function (it) {
+        it.parts.forEach(function (p, i) { p.innerHTML = it.html[i]; });
+        var hit = !terms.length || test(it);
+        var inCat = faqCat === "all" || it.group.getAttribute("data-cat") === faqCat;
+        it.el.hidden = !(hit && inCat);
+        if (hit && !inCat) elsewhere++;
+        if (hit && inCat) {
+          shown++;
+          if (terms.length) it.parts.forEach(function (p) { highlight(p, terms); });
+        }
+        // Przy wyszukiwaniu pokazujemy od razu odpowiedzi (podświetlenia bywają w treści)
+        if (it.el.hasAttribute("data-auto-open")) { it.el.open = false; it.el.removeAttribute("data-auto-open"); }
+        if (terms.length && hit && inCat && !it.el.open) { it.el.open = true; it.el.setAttribute("data-auto-open", ""); }
+      });
+      faqGroups.forEach(function (g) {
+        g.hidden = !g.querySelector(".faq-item:not([hidden])");
+      });
+      if (faqEmpty) faqEmpty.hidden = shown !== 0;
+      if (faqOther) faqOther.hidden = !(shown === 0 && elsewhere > 0);
+      if (faqStatus) {
+        faqStatus.textContent = terms.length && shown ? "Znaleziono: " + odmiana(shown) + (test === matchAny ? " (pasuje część słów)" : "") : "";
+      }
+    };
+
+    var setCat = function (cat) {
+      faqCat = cat;
+      filterButtons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-filter") === cat)); });
+      applyFaq();
+    };
+    filterButtons.forEach(function (b) {
+      b.addEventListener("click", function () { setCat(b.getAttribute("data-filter")); });
+    });
+    var allBtn = faqFull.querySelector("[data-faq-all]");
+    if (allBtn) allBtn.addEventListener("click", function () { setCat("all"); });
+    if (faqInput) {
+      var faqTimer;
+      faqInput.addEventListener("input", function () {
+        clearTimeout(faqTimer);
+        faqTimer = setTimeout(applyFaq, 120);
+      });
+      if (faqInput.value) applyFaq();
+    }
   }
 
   /* ---------- Zakładki "Z czym pomagamy" (podstrony przedmiotów) ---------- */

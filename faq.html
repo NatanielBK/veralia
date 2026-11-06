@@ -50,7 +50,7 @@
       <a href="index.html" class="brand" aria-label="Veralia — strona główna">
         <picture>
           <source type="image/webp" srcset="assets/monogram-va.webp">
-          <img class="brand-monogram" src="assets/monogram-va.png" alt="" width="34" height="34" loading="eager">
+          <img class="brand-monogram" src="assets/monogram-va.png" alt="" width="46" height="30" loading="eager">
         </picture>
         <span class="brand-word">Veralia</span>
       </a>
@@ -107,7 +107,7 @@
       <a href="index.html" class="brand" aria-hidden="true" tabindex="-1">
         <picture>
           <source type="image/webp" srcset="assets/monogram-va.webp">
-          <img class="brand-monogram" src="assets/monogram-va.png" alt="" width="34" height="34">
+          <img class="brand-monogram" src="assets/monogram-va.png" alt="" width="46" height="30">
         </picture>
         <span class="brand-word">Veralia</span>
       </a>
@@ -181,26 +181,17 @@
           <h1 class="reveal">Najczęściej zadawane <em>pytania</em></h1>
           <p class="lead reveal">Wszystko, co warto wiedzieć przed rozpoczęciem nauki z Veralią. Przygotowaliśmy odpowiedzi na najczęściej pojawiające się pytania dotyczące organizacji naszych korepetycji online.</p>
         </div>
-        <span class="arch-frame page-hero-v4-arch" aria-hidden="true">
-          <span class="arch-media">
-            <picture>
-              <source type="image/webp" srcset="assets/monogram-va.webp">
-              <img src="assets/monogram-va.png" alt="" width="64" height="64" loading="lazy">
-            </picture>
-          </span>
-        </span>
       </div>
     </section>
 
 <!-- ===== FAQ ===== -->
-    <section id="faq-list">
+    <section id="faq-list" class="faq-full">
       <div class="container">
 
         <div class="faq-search reveal">
-          <label for="faqSearch" class="sr-only">Szukaj w&nbsp;pytaniach</label>
-          <input type="search" id="faqSearch" placeholder="Szukaj pytania… np. „faktura”, „odwołanie”">
+          <label for="faqSearch" class="sr-only">Szukaj w&nbsp;pytaniach i&nbsp;odpowiedziach</label>
+          <input type="search" id="faqSearch" autocomplete="off" placeholder="Szukaj pytania… np. „faktura”, „odwołanie”">
         </div>
-        <p class="faq-empty" id="faqEmpty" hidden>Brak pytań odpowiadających wyszukiwaniu.</p>
         <div class="faq-filters reveal" role="group" aria-label="Filtruj pytania według kategorii">
           <button type="button" data-filter="all" aria-pressed="true">Wszystkie</button>
           <button type="button" data-filter="zapisy" aria-pressed="false">Zapisy i organizacja</button>
@@ -208,46 +199,52 @@
           <button type="button" data-filter="platnosci" aria-pressed="false">Płatności</button>
           <button type="button" data-filter="rodzice" aria-pressed="false">Rodzice</button>
         </div>
+        <p class="faq-status" id="faqStatus" aria-live="polite"></p>
+        <div class="faq-empty" id="faqEmpty" hidden>
+          <p>Nie znaleźliśmy pytania pasującego do wyszukiwania.</p>
+          <p class="faq-empty-more" data-faq-other hidden>W&nbsp;innych kategoriach są pasujące pytania. <button type="button" class="link-inline" data-faq-all>Pokaż wszystkie kategorie</button></p>
+          <p>Napisz do nas, a&nbsp;odpowiemy osobiście: <a href="kontakt.html#formularz">przejdź do formularza kontaktowego&nbsp;→</a></p>
+        </div>
 
         <div class="faq-group reveal" data-cat="zapisy">
           <h2 class="faq-group-title">Zapisy i organizacja</h2>
           <details class="faq-item">
-            <summary>Jak zapisać się na korepetycje?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Jak zapisać się na korepetycje?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>To bardzo proste! Wystarczy wypełnić formularz zgłoszeniowy dostępny na naszej stronie internetowej, wskazując wybrany przedmiot, poziom nauczania oraz swoje potrzeby. Po otrzymaniu zgłoszenia skontaktujemy się z Tobą, aby ustalić szczegóły, dobrać odpowiedniego korepetytora i zaproponować termin pierwszych zajęć.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Z jakich przedmiotów oferujecie korepetycje?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Z jakich przedmiotów oferujecie korepetycje?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Oferujemy korepetycje online ze wszystkich przedmiotów szkolnych, w tym m.in. matematyki, języka polskiego, fizyki, chemii, biologii, geografii, historii i informatyki. Prowadzimy również zajęcia z języków obcych: angielskiego, hiszpańskiego i rosyjskiego. Pomagamy zarówno w bieżącej nauce, jak i w przygotowaniach do sprawdzianów, egzaminu ósmoklasisty oraz matury na poziomie podstawowym i rozszerzonym.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Czy mogę zapisać się tylko na jedną lekcję?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Czy mogę zapisać się tylko na jedną lekcję?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Tak. Nie musisz od razu deklarować długoterminowej współpracy. Możesz rozpocząć od pojedynczego spotkania, a następnie zdecydować, czy chcesz kontynuować naukę regularnie.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Czy zajęcia mogą odbywać się regularnie?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Czy zajęcia mogą odbywać się regularnie?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Tak. Oferujemy zarówno pojedyncze korepetycje, jak i systematyczne zajęcia, np. raz lub dwa razy w tygodniu. Regularna współpraca pozwala na bieżąco utrwalać wiedzę, monitorować postępy i konsekwentnie realizować cele edukacyjne.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Czy pomagacie w przygotowaniach do egzaminu ósmoklasisty i matury?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Czy pomagacie w przygotowaniach do egzaminu ósmoklasisty i matury?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Tak. Oferujemy zajęcia przygotowujące do egzaminu ósmoklasisty oraz matury na poziomie podstawowym i rozszerzonym. Podczas przygotowań koncentrujemy się na wymaganiach egzaminacyjnych, typowych zadaniach, strategiach ich rozwiązywania oraz obszarach, które wymagają dodatkowego utrwalenia.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Czy pomagacie również uczniom mającym duże zaległości?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Czy pomagacie również uczniom mającym duże zaległości?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Jak najbardziej. Nasze korepetycje są przeznaczone zarówno dla uczniów, którzy chcą poprawić bieżące wyniki, jak i dla osób potrzebujących bardziej kompleksowego wsparcia. Korepetytor dostosowuje tempo nauki do aktualnych umiejętności ucznia, pomagając stopniowo uporządkować i zrozumieć materiał.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Czy otrzymam potwierdzenie zapisu?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Czy otrzymam potwierdzenie zapisu?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Tak. Po przesłaniu formularza otrzymasz potwierdzenie zgłoszenia, a następnie skontaktujemy się z Tobą w celu ustalenia szczegółów. Po uzgodnieniu terminu prześlemy również informacje organizacyjne dotyczące pierwszej lekcji.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Nie wiem, jakie zajęcia będą najlepsze. Czy pomożecie mi wybrać?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Nie wiem, jakie zajęcia będą najlepsze. Czy pomożecie mi wybrać?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Oczywiście! Jeśli nie masz pewności, jakiego rodzaju wsparcia potrzebujesz, skontaktuj się z nami. Pomożemy określić potrzeby edukacyjne i dobrać odpowiednie zajęcia.</p>
           </details>
 
@@ -256,47 +253,47 @@
         <div class="faq-group reveal" data-cat="zajecia">
           <h2 class="faq-group-title">Zajęcia</h2>
           <details class="faq-item">
-            <summary>Czy zajęcia prowadzą wykwalifikowani korepetytorzy?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Czy zajęcia prowadzą wykwalifikowani korepetytorzy?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Tak. W Veralii stawiamy na współpracę z profesjonalną kadrą korepetytorów, którzy posiadają odpowiednią wiedzę merytoryczną oraz kompetencje pozwalające skutecznie przekazywać ją uczniom. Zależy nam nie tylko na wysokim poziomie nauczania, ale także na zaangażowaniu, cierpliwości i umiejętności dostosowania sposobu pracy do indywidualnych potrzeb ucznia.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Czy zajęcia są indywidualne?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Czy zajęcia są indywidualne?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Tak. Oferujemy indywidualne korepetycje w formule 1:1, dzięki którym cała uwaga korepetytora skupiona jest na jednym uczniu. Pozwala to dostosować tempo pracy, zakres materiału i metody nauczania do konkretnych potrzeb oraz celów edukacyjnych.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Ile trwa jedna lekcja?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Ile trwa jedna lekcja?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Każda lekcja w Veralii trwa pełne 60 minut. Wierzymy, że odpowiednia ilość czasu pozwala nie tylko dokładnie omówić materiał, ale również przećwiczyć nowe zagadnienia i rozwiać ewentualne wątpliwości.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Jak odbywają się zajęcia online?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Jak odbywają się zajęcia online?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Zajęcia prowadzone są w formie spotkań online z wykorzystaniem platformy umożliwiającej kontakt z korepetytorem w czasie rzeczywistym. Przed pierwszą lekcją otrzymasz wszystkie niezbędne informacje dotyczące sposobu połączenia. Podczas spotkania korepetytor może korzystać m.in. z tablicy interaktywnej, prezentacji, materiałów edukacyjnych oraz wspólnie rozwiązywanych zadań.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Czy muszę posiadać specjalny sprzęt?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Czy muszę posiadać specjalny sprzęt?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Nie. Wystarczy komputer lub tablet ze stabilnym połączeniem internetowym, mikrofonem oraz możliwością uczestniczenia w spotkaniu online. Zalecamy korzystanie ze słuchawek, aby zapewnić większy komfort podczas zajęć.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Czy mogę wybrać korepetytora?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Czy mogę wybrać korepetytora?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Zależy nam na tym, aby współpraca była komfortowa i skuteczna, dlatego przy doborze nauczyciela uwzględniamy poziom nauczania, potrzeby ucznia oraz jego preferencje. Jeśli zależy Ci na konkretnym sposobie prowadzenia zajęć, poinformuj nas o tym podczas zgłoszenia.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Czy mogę zmienić korepetytora w trakcie współpracy?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Czy mogę zmienić korepetytora w trakcie współpracy?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Oczywiście. Rozumiemy, że odpowiednie dopasowanie korepetytora ma ogromne znaczenie dla komfortu i efektywności nauki. Jeżeli z jakiegokolwiek powodu współpraca nie będzie spełniała Twoich oczekiwań, skontaktuj się z nami. Postaramy się zaproponować inne rozwiązanie lub zmianę nauczyciela, zależnie od dostępności naszej kadry.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Czy mogę odwołać lub przełożyć zajęcia?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Czy mogę odwołać lub przełożyć zajęcia?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Tak. Rozumiemy, że mogą wystąpić nieprzewidziane sytuacje. Prosimy o możliwie wcześniejsze informowanie nas o konieczności zmiany terminu. Szczegółowe zasady odwoływania i przekładania lekcji znajdują się w sekcji „<a href="zasady.html">Zasady zajęć</a>”.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Czy mogę przesłać materiały lub zadania przed zajęciami?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Czy mogę przesłać materiały lub zadania przed zajęciami?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Oczywiście. Zachęcamy do wcześniejszego przesyłania materiałów, tematów oraz zagadnień, które mają zostać omówione podczas lekcji. Dzięki temu korepetytor może lepiej przygotować zajęcia i efektywnie wykorzystać wspólny czas.</p>
           </details>
 
@@ -305,17 +302,17 @@
         <div class="faq-group reveal" data-cat="platnosci">
           <h2 class="faq-group-title">Płatności</h2>
           <details class="faq-item">
-            <summary>Ile kosztują korepetycje?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Ile kosztują korepetycje?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Nasz cennik jest przejrzysty i zależy od rodzaju zajęć: korepetycje z przedmiotów szkolnych — 130 zł / 60 minut, korepetycje na poziomie rozszerzonym — 140 zł / 60 minut, język angielski, hiszpański i rosyjski — 140 zł / 60 minut. Cena obejmuje indywidualną, 60-minutową lekcję online.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Jak wygląda płatność za korepetycje?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Jak wygląda płatność za korepetycje?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Płatności za zajęcia dokonywane są bezpośrednio na rzecz Veralii. Po ustaleniu szczegółów współpracy przekazujemy informacje dotyczące terminu oraz sposobu opłacenia zajęć.</p>
           </details>
 
           <details class="faq-item">
-            <summary>Czy wystawiacie faktury?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Czy wystawiacie faktury?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Tak. Na życzenie klienta wystawiamy fakturę zgodnie z obowiązującymi przepisami.</p>
           </details>
 
@@ -324,35 +321,13 @@
         <div class="faq-group reveal" data-cat="rodzice">
           <h2 class="faq-group-title">Rodzice i kontakt</h2>
           <details class="faq-item">
-            <summary>Czy rodzic może kontaktować się z Wami w sprawie postępów dziecka?<span class="faq-icon" aria-hidden="true"></span></summary>
+            <summary><span class="faq-q">Czy rodzic może kontaktować się z Wami w sprawie postępów dziecka?</span><span class="faq-icon" aria-hidden="true"></span></summary>
             <p>Tak. Zależy nam na dobrej komunikacji i partnerskiej współpracy z rodzicami. W przypadku uczniów niepełnoletnich rodzic lub opiekun prawny może kontaktować się z nami w sprawach organizacyjnych oraz dotyczących przebiegu nauki i potrzeb edukacyjnych dziecka.</p>
           </details>
 
         </div>
       </div>
     </section>
-    <script>
-    (function () {
-      var input = document.getElementById("faqSearch");
-      var empty = document.getElementById("faqEmpty");
-      if (!input) return;
-      input.addEventListener("input", function () {
-        var q = input.value.trim().toLowerCase();
-        var items = document.querySelectorAll("#faq-list .faq-item");
-        var visible = 0;
-        items.forEach(function (item) {
-          var match = !q || item.textContent.toLowerCase().indexOf(q) !== -1;
-          item.style.display = match ? "" : "none";
-          if (match) visible++;
-        });
-        document.querySelectorAll("#faq-list .faq-group").forEach(function (group) {
-          var any = group.querySelectorAll('.faq-item:not([style*="display: none"])').length > 0;
-          group.style.display = any ? "" : "none";
-        });
-        if (empty) empty.hidden = visible !== 0;
-      });
-    })();
-    </script>
 
 
     <section class="reveal">
@@ -376,7 +351,7 @@
       <div class="footer-brand">
         <picture>
           <source type="image/webp" srcset="assets/monogram-va.webp">
-          <img src="assets/monogram-va.png" alt="Veralia" width="40" height="26" loading="lazy">
+          <img src="assets/monogram-va.png" alt="Veralia" width="36" height="23" loading="lazy">
         </picture>
         <p class="footer-tagline">Veralia – wiedza, która otwiera możliwości.</p>
       </div>
