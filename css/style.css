@@ -1274,7 +1274,11 @@ section > .container > h2 { margin-bottom: 2.25rem; max-width: 24ch; }
   border-radius: var(--radius-card);
   padding: var(--space-md);
   box-shadow: var(--shadow-float);
+  /* podpis zawsze w lewym dolnym rogu, niezależnie od długości opinii */
+  display: flex;
+  flex-direction: column;
 }
+.review-card .review-tag { margin-top: auto; align-self: flex-start; }
 .review-stars { color: var(--bronze); font-size: 0.9rem; letter-spacing: 0.15em; margin-bottom: 0.75rem; }
 .review-quote-mark {
   display: block;
