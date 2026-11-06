@@ -735,8 +735,10 @@ html:not(.js) .mobile-menu-trigger { display: none; }
 }
 .hero-chip {
   position: absolute;
-  top: 1rem;
-  right: -0.5rem;
+  /* plakietka nachodzi na zdjęcie: tam, gdzie łuk już schodzi w bok */
+  top: 22%;
+  right: -1.25rem;
+  z-index: 2;
   background: var(--bronze-dark);
   color: var(--espresso-text);
   font-size: 0.8rem;
