@@ -1198,7 +1198,10 @@ section > .container > h2 { margin-bottom: 2.25rem; max-width: 24ch; }
 .founder-portrait.has-photo { width: min(100%, 280px); height: auto; margin: 0 auto 1.5rem; }
 .founder-portrait.has-photo .arch-media { display: block; aspect-ratio: 4 / 5; height: auto; }
 .founder-portrait.has-photo picture { display: block; width: 100%; height: 100%; }
-.founder-portrait.has-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; }
+.founder-portrait.has-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; }
+/* Zdjęcia założycielek: zaokrąglony prostokąt zamiast łuku, bo łuk ścinał głowę (zdjęcie Weroniki jest przycięte u góry już w oryginale) */
+.founder-portrait.has-photo .arch-media { border-radius: 28px; }
+.founder-portrait.has-photo::before { border-radius: 34px; }
 .founder-initials {
   font-family: var(--font-serif);
   font-weight: 600;

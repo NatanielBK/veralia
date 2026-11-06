@@ -343,15 +343,16 @@
   }
 
   /* ---------- O nas: rozwijane bio ---------- */
-  var bioToggle = document.querySelector(".bio-toggle");
-  if (bioToggle) {
+  // każda karta ma własny przycisk (wcześniej działał tylko pierwszy)
+  document.querySelectorAll(".bio-toggle").forEach(function (bioToggle) {
     bioToggle.addEventListener("click", function () {
       var bio = document.getElementById(bioToggle.getAttribute("aria-controls"));
+      if (!bio) return;
       var isOpen = bio.classList.toggle("is-open");
       bioToggle.setAttribute("aria-expanded", String(isOpen));
       bioToggle.textContent = isOpen ? "Zwiń" : "Czytaj więcej";
     });
-  }
+  });
 
   /* ---------- Karuzele (Dla kogo, Opinie): kropki zawsze pokazują kartę, którą widać ---------- */
   function initCarousel(track, dotsWrap, cardSel, align, prevBtn, nextBtn) {
