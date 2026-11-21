@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veralia: korepetycje online, szkolny klimat (wersja robocza 2)</title>
+<meta name="description" content="Indywidualne korepetycje online 1:1 z przedmiotów szkolnych i języków obcych. Prowadzą Weronika Walas i Aleksandra Pieprzyca.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="assets/monogram-va.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar__inner">
+    <a href="#hero" class="topbar__logo">
+      <img src="assets/logo-pelne.webp" alt="Veralia, centrum korepetycji">
+    </a>
+    <a href="#formularz" class="btn btn--primary topbar__cta">Umów lekcję</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- 1. HERO (typ B: gradient, tekst jasny) -->
+  <section class="section section--gradient hero" id="hero">
+    <div class="container hero__grid">
+      <div>
+        <span class="hero__badge"><span class="dot">V</span> Centrum korepetycji online</span>
+        <h1>Zrozumieć matematykę i inne przedmioty, krok po kroku.</h1>
+        <p class="lead" style="margin-top:18px;max-width:46ch;">
+          Indywidualne korepetycje 1:1 online, z przedmiotów szkolnych i języków obcych.
+          Uczymy od szkoły podstawowej po maturę. Prowadzą Weronika Walas i Aleksandra Pieprzyca.
+        </p>
+        <div class="hero__actions">
+          <a href="#formularz" class="btn btn--onlight">Umów pierwszą lekcję</a>
+          <a href="#przedmioty" class="btn btn--outline on-dark-btn">Zobacz przedmioty</a>
+        </div>
+        <p class="hero__dopisek">Możesz zacząć od jednej lekcji, bez zobowiązań. Od 130 zł za 60 minut.</p>
+        <div class="hero__facts">
+          <span class="hero__fact">1:1 online</span>
+          <span class="hero__fact">60 minut</span>
+          <span class="hero__fact">11 przedmiotów i języków</span>
+        </div>
+      </div>
+
+      <div class="polaroids">
+        <div class="polaroid polaroid--a">
+          <span class="polaroid__pin"></span>
+          <img src="assets/foto/weronika-walas.jpg" alt="Weronika Walas, korepetytorka matematyki">
+          <span class="polaroid__caption">Weronika Walas</span>
+          <span class="polaroid__role">6 lat doświadczenia</span>
+        </div>
+        <div class="polaroid polaroid--b">
+          <span class="polaroid__pin"></span>
+          <img src="assets/foto/aleksandra-pieprzyca.jpg" alt="Aleksandra Pieprzyca, korepetytorka matematyki">
+          <span class="polaroid__caption">Aleksandra Pieprzyca</span>
+          <span class="polaroid__role">4 lata doświadczenia</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. OPINIE (typ A: jasne tło + kratka zeszytu, nagłówek gradient) -->
+  <section class="section notebook" id="opinie">
+    <div class="container">
+      <div class="reviews-top">
+        <div class="section-head" style="margin-bottom:0;">
+          <h2>Co mówią uczniowie i <span class="gradient-text marker">rodzice</span></h2>
+          <p class="lead">Prawdziwe wiadomości, które dostajemy od rodziców i uczniów.</p>
+        </div>
+        <div class="reviews-nav">
+          <button type="button" id="reviews-prev" aria-label="Poprzednie opinie">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg>
+          </button>
+          <button type="button" id="reviews-next" aria-label="Następne opinie">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="reviews-track" id="reviews-track">
+        <article class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">Dziękuję za ten rok przygotowań do matury. Z Panią Weroniką zaczynałam naukę praktycznie od zera, matematyka nigdy nie była mi bliska. Dzięki współpracy udało mi się uzyskać 87% z matury, a matematyka przestała być dziedziną z kosmosu. Dzięki!</p>
+          <div class="review-card__who">
+            <span class="review-card__avatar">M</span>
+            <span class="review-card__name">Maturzystka</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">Zajęcia z Panią Aleksandrą to zdecydowanie strzał w dziesiątkę. W poprzednim semestrze syn miał same 1 i 2, a w tym średnia z matematyki to ponad 4,80. Szok! Serdecznie polecamy.</p>
+          <div class="review-card__who">
+            <span class="review-card__avatar">M</span>
+            <span class="review-card__name">Mama ucznia</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">Jestem mamą chłopca ze spektrum. Nauczyciele w szkole publicznej spisali mojego syna na straty, odsyłają od poradni do poradni. Dzięki indywidualnemu podejściu Pani Weroniki, wsparciu i kompetencjom syn zaczął chętniej chodzić do szkoły i zaliczać sprawdziany. Pani Weronika prócz wielkiej wiedzy wiele razy wykazała się też dużym sercem. Super korepetytor!</p>
+          <div class="review-card__who">
+            <span class="review-card__avatar">M</span>
+            <span class="review-card__name">Mama ucznia</span>
+          </div>
+        </article>
+
+        <!-- Placeholder na wideo UGC 9:16 -->
+        <article class="review-card review-card--video">
+          <span class="play-circle">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l12-7z"/></svg>
+          </span>
+          <p>Wkrótce wideo od rodziców</p>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">Z całego serduszka polecam lekcje i przygotowania do matury z Weroniką, to przede wszystkim dzięki niej zdałam poprawkę. Nigdy przy żadnych nauczycielach matematyki nie czułam się tak komfortowo i bezpiecznie do zadawania pytań. Nigdy nie czułam się zawstydzona, bo czegoś nie potrafiłam rozwiązać. Naprawdę, jeśli korepetytor, to tylko taki.</p>
+          <div class="review-card__who">
+            <span class="review-card__avatar">U</span>
+            <span class="review-card__name">Uczennica, poprawka matury</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">Dzisiaj w szkole rozwiązywała zadanie przy tablicy i zrobiła całe samodzielnie. Pan był bardzo pozytywnie zaskoczony i ją pochwalił. Pytał, czy się uczyła. Powiedziała, że ma korepetycje. Pan od matematyki powiedział, żeby pozdrowiła od niego Panią, która ją nauczyła, bo jest znakomita.</p>
+          <div class="review-card__who">
+            <span class="review-card__avatar">M</span>
+            <span class="review-card__name">Mama uczennicy</span>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div class="review-card__stars">★★★★★</div>
+          <p class="review-card__text">Pani Weronika pomaga moim dzieciom w nauce matematyki, jest kompetentna, profesjonalna, a jednocześnie pełna zaangażowania i empatii. Widać nie tylko postęp na podstawie ocen, ale również zmieniło się na lepsze samo podejście dzieci do tego przedmiotu.</p>
+          <div class="review-card__who">
+            <span class="review-card__avatar">M</span>
+            <span class="review-card__name">Magdalena P., mama uczniów</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. O NAS (typ B: gradient, tekst jasny) -->
+  <section class="section section--gradient on-dark" id="o-nas">
+    <div class="container">
+      <div class="section-head center">
+        <h2>Poznaj Weronikę i Aleksandrę</h2>
+        <p class="lead">Współzałożycielki Veralii i korepetytorki matematyki.</p>
+      </div>
+
+      <div class="team-grid">
+        <article class="team-card">
+          <div class="team-card__photo">
+            <img src="assets/foto/weronika-walas.jpg" alt="Weronika Walas">
+          </div>
+          <div>
+            <h3>Weronika Walas</h3>
+            <p class="team-card__role">Współzałożycielka Veralii, korepetytorka matematyki</p>
+            <p class="team-card__bio">Od sześciu lat zajmuje się nauczaniem matematyki, przygotowując uczniów szkół podstawowych i ponadpodstawowych do sprawdzianów, egzaminów ósmoklasisty oraz matury na obu poziomach. Absolwentka Uniwersytetu Jagiellońskiego.</p>
+            <div class="team-card__chips">
+              <span class="chip">Absolwentka UJ</span>
+              <span class="chip">6 lat doświadczenia</span>
+              <span class="chip">Egzamin ósmoklasisty</span>
+              <span class="chip">Matura PP i PR</span>
+            </div>
+            <div class="team-card__stat">Jej uczniowie osiągają wyniki maturalne na poziomie 80-98%.</div>
+          </div>
+        </article>
+
+        <article class="team-card">
+          <div class="team-card__photo">
+            <img src="assets/foto/aleksandra-pieprzyca.jpg" alt="Aleksandra Pieprzyca">
+          </div>
+          <div>
+            <h3>Aleksandra Pieprzyca</h3>
+            <p class="team-card__role">Współzałożycielka Veralii, korepetytorka matematyki</p>
+            <p class="team-card__bio">Inżynier Akademii Górniczo-Hutniczej w Krakowie, absolwentka kierunku Inżynieria i Zarządzanie Procesami Przemysłowymi. Obecnie studentka studiów magisterskich na Uniwersytecie Jagiellońskim, na kierunku Finanse i Controlling.</p>
+            <div class="team-card__chips">
+              <span class="chip">AGH Kraków</span>
+              <span class="chip">UJ, Finanse i Controlling</span>
+              <span class="chip">4 lata doświadczenia</span>
+              <span class="chip">Matematyka PP i PR</span>
+            </div>
+            <div class="team-card__stat">Cztery lata prowadzenia indywidualnych korepetycji online.</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PRZEDMIOTY (typ A: jasne tło, kolorowe kafle) -->
+  <section class="section section--paper" id="przedmioty">
+    <div class="container">
+      <div class="section-head">
+        <h2>Przedmioty, z którymi <span class="gradient-text marker">pomagamy</span></h2>
+        <p class="lead">Jedenaście przedmiotów szkolnych i języków, zawsze w formie indywidualnych zajęć 1:1.</p>
+      </div>
+
+      <div class="subjects-grid">
+
+        <a class="subject-tile subject-tile--flagship" href="https://veralia.pl/przedmioty/matematyka.html">
+          <span class="subject-tile__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="9" r="2.6"/><path d="M24 13 14 40"/><path d="M24 13 34 40"/><path d="M18 30h12"/></svg>
+          </span>
+          <h3>Matematyka</h3>
+          <p>Od ułamków i równań po funkcje i trygonometrię, przed egzaminem ósmoklasisty i maturą na obu poziomach.</p>
+        </a>
+
+        <a class="subject-tile" style="background:#E0E4F9;color:#1D30A2" href="https://veralia.pl/przedmioty/jezyk-polski.html">
+          <span class="subject-tile__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12c6-4 12-4 18 0c6-4 12-4 18 0v24c-6-4-12-4-18 0c-6-4-12-4-18 0z"/><path d="M24 12v24"/></svg>
+          </span>
+          <h3>Język polski</h3>
+          <p>Lektury, wypracowania i interpretacja tekstów, od szkoły podstawowej po maturę podstawową i rozszerzoną.</p>
+        </a>
+
+        <a class="subject-tile" style="background:#E3E4F7;color:#2B2F9A" href="https://veralia.pl/przedmioty/fizyka.html">
+          <span class="subject-tile__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="2.8" fill="currentColor" stroke="none"/><ellipse cx="24" cy="24" rx="19" ry="7.5"/><ellipse cx="24" cy="24" rx="19" ry="7.5" transform="rotate(60 24 24)"/><ellipse cx="24" cy="24" rx="19" ry="7.5" transform="rotate(120 24 24)"/></svg>
+          </span>
+          <h3>Fizyka</h3>
+          <p>Ruch, siły, energia i prąd wyjaśnione krok po kroku, także przed maturą rozszerzoną.</p>
+        </a>
+
+        <a class="subject-tile" style="background:#E6E3F6;color:#3A2E93" href="https://veralia.pl/przedmioty/chemia.html">
+          <span class="subject-tile__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M19 6h10"/><path d="M21 6v11L10 36a3 3 0 0 0 3 4h22a3 3 0 0 0 3-4L27 17V6"/><path d="M16 29h16"/></svg>
+          </span>
+          <h3>Chemia</h3>
+          <p>Reakcje, stężenia i obliczenia, które rozumiesz zamiast wkuwać, od podstawówki po maturę rozszerzoną.</p>
+        </a>
+
+        <a class="subject-tile" style="background:#E8E3F4;color:#482C8C" href="https://veralia.pl/przedmioty/biologia.html">
+          <span class="subject-tile__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M39 9C20 9 9 21 9 36c15 0 28-11 28-27z"/><path d="M14 33c7-8 13-13 23-22"/></svg>
+          </span>
+          <h3>Biologia</h3>
+          <p>Od komórki po genetykę, z materiałem łączonym w całość, także przed maturą rozszerzoną.</p>
+        </a>
+
+        <a class="subject-tile" style="background:#EBE3F3;color:#572B84" href="https://veralia.pl/przedmioty/geografia.html">
+          <span class="subject-tile__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><ellipse cx="24" cy="24" rx="7.5" ry="17"/><path d="M7 24h34"/><path d="M10.5 15c8 5 19 5 27 0"/><path d="M10.5 33c8-5 19-5 27 0"/></svg>
+          </span>
+          <h3>Geografia</h3>
+          <p>Mapa, procesy w przyrodzie i obliczenia, przed sprawdzianem i maturą rozszerzoną.</p>
+        </a>
+
+        <a class="subject-tile" style="background:#EEE3F2;color:#652A7D" href="https://veralia.pl/przedmioty/historia.html">
+          <span class="subject-tile__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6 40 14H8z"/><path d="M10 14h28"/><path d="M14 18v20"/><path d="M24 18v20"/><path d="M34 18v20"/><path d="M8 40h32"/></svg>
+          </span>
+          <h3>Historia</h3>
+          <p>Epoki, przyczyny i skutki oraz praca ze źródłami, od podstawówki po maturę rozszerzoną.</p>
+        </a>
+
+        <a class="subject-tile" style="background:#F0E2F0;color:#742975" href="https://veralia.pl/przedmioty/informatyka.html">
+          <span class="subject-tile__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M18 14 7 24l11 10"/><path d="M30 14l11 10-11 10"/></svg>
+          </span>
+          <h3>Informatyka</h3>
+          <p>Algorytmy, programowanie i bazy danych, od pierwszych kroków po maturę rozszerzoną.</p>
+        </a>
+
+        <a class="subject-tile" style="background:#F3E2EF;color:#82286E" href="https://veralia.pl/przedmioty/jezyk-angielski.html">
+          <span class="subject-tile__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10h32a4 4 0 0 1 4 4v15a4 4 0 0 1-4 4H20l-9 8v-8H8a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4z"/><circle cx="17" cy="21.5" r="1.6" fill="currentColor" stroke="none"/><circle cx="24" cy="21.5" r="1.6" fill="currentColor" stroke="none"/><circle cx="31" cy="21.5" r="1.6" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <h3>Język angielski</h3>
+          <p>Gramatyka, słownictwo i mówienie, na co dzień, przed egzaminem ósmoklasisty i maturą.</p>
+        </a>
+
+        <a class="subject-tile" style="background:#F6E2ED;color:#912666" href="https://veralia.pl/przedmioty/jezyk-hiszpanski.html">
+          <span class="subject-tile__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10h32a4 4 0 0 1 4 4v15a4 4 0 0 1-4 4H20l-9 8v-8H8a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4z"/><circle cx="24" cy="18" r="1.7" fill="currentColor" stroke="none"/><path d="M24 23v8"/></svg>
+          </span>
+          <h3>Język hiszpański</h3>
+          <p>Od podstaw gramatyki po rozmowę i maturę na poziomie podstawowym lub rozszerzonym.</p>
+        </a>
+
+        <a class="subject-tile" style="background:#F9E2EC;color:#9F255F" href="https://veralia.pl/przedmioty/jezyk-niemiecki.html">
+          <span class="subject-tile__icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 10h32a4 4 0 0 1 4 4v15a4 4 0 0 1-4 4H20l-9 8v-8H8a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4z"/><circle cx="20" cy="19" r="1.5" fill="currentColor" stroke="none"/><circle cx="28" cy="19" r="1.5" fill="currentColor" stroke="none"/><path d="M24 19v9"/></svg>
+          </span>
+          <h3>Język niemiecki</h3>
+          <p>Rodzajniki, przypadki i rozmowa, czyli niemiecki od podstaw po maturę.</p>
+        </a>
+
+      </div>
+
+      <div class="subjects-cta">
+        <p>Nie wiesz, co wybrać?</p>
+        <a href="https://veralia.pl/kontakt.html" class="btn btn--outline" style="color:var(--ink)">Napisz do nas</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CENY + JAK ZACZYNAMY (typ B: gradient, tekst jasny) -->
+  <section class="section section--gradient on-dark" id="cennik">
+    <div class="container">
+      <div class="section-head center">
+        <h2>Jedna cena, jedna lekcja na start</h2>
+        <p class="lead">Każda lekcja trwa pełne 60 minut, bez ukrytych kosztów.</p>
+      </div>
+
+      <div class="price-grid">
+        <div class="price-card">
+          <h3>Przedmioty szkolne</h3>
+          <p class="price-card__desc">Poziom podstawowy · 60 min</p>
+          <div class="price-card__amount">130 zł <span>/ lekcja</span></div>
+        </div>
+        <div class="price-card">
+          <h3>Poziom rozszerzony</h3>
+          <p class="price-card__desc">Przedmioty szkolne · 60 min</p>
+          <div class="price-card__amount">140 zł <span>/ lekcja</span></div>
+        </div>
+        <div class="price-card">
+          <h3>Języki obce</h3>
+          <p class="price-card__desc">Angielski, hiszpański, niemiecki · 60 min</p>
+          <div class="price-card__amount">140 zł <span>/ lekcja</span></div>
+        </div>
+      </div>
+
+      <div class="section-head center steps-head">
+        <h2 style="font-size:1.5rem;">Jak zaczynamy</h2>
+      </div>
+
+      <div class="steps">
+        <div class="step-card">
+          <span class="step-card__num">1</span>
+          <h3>Wypełnij formularz</h3>
+          <p>Napisz, z jakiego przedmiotu potrzebujesz pomocy, na jakim poziomie i czego oczekujesz.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-card__num">2</span>
+          <h3>Dobór korepetytora</h3>
+          <p>Skontaktujemy się z Tobą i dobierzemy korepetytora, biorąc pod uwagę poziom, potrzeby i preferencje.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-card__num">3</span>
+          <h3>Pierwsza lekcja</h3>
+          <p>Zaczynasz od jednej lekcji, bez zobowiązań. Trwa pełne 60 minut i odbywa się online.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-card__num">4</span>
+          <h3>Regularna nauka</h3>
+          <p>Jeśli wszystko pasuje, uczysz się regularnie, na przykład 1-2 razy w tygodniu.</p>
+        </div>
+      </div>
+
+      <div class="ceny-cta">
+        <a href="#formularz" class="btn btn--onlight">Umów pierwszą lekcję</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FORMULARZ (typ A: jasne tło) -->
+  <section class="section section--paper-soft" id="formularz">
+    <div class="container">
+      <div class="section-head">
+        <h2>Zapisz się na <span class="gradient-text marker">pierwszą</span> lekcję</h2>
+        <p class="lead">Wypełnij krótki formularz. Skontaktujemy się, dobierzemy korepetytora i ustalimy termin.</p>
+      </div>
+
+      <div class="form-wrap">
+        <div class="form-points">
+          <div class="form-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
+            <span>Możesz zacząć od jednej lekcji, bez zobowiązań.</span>
+          </div>
+          <div class="form-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
+            <span>Dobierzemy korepetytora do Twojego poziomu i potrzeb.</span>
+          </div>
+          <div class="form-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>
+            <span>Bezpłatne odwołanie najpóźniej 24 godziny przed zajęciami.</span>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row form-row--2">
+            <div class="field" id="imie-field">
+              <label for="imie">Imię i nazwisko</label>
+              <input type="text" id="imie" name="imie" required>
+              <span class="field__error" id="imie-error"></span>
+            </div>
+            <div class="field">
+              <label for="telefon">Telefon</label>
+              <input type="tel" id="telefon" name="telefon" placeholder="600 700 800" required>
+              <span class="field__error" id="telefon-error"></span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email (opcjonalnie)</label>
+            <input type="email" id="email" name="email">
+          </div>
+
+          <div class="field">
+            <label for="przedmiot">Przedmiot</label>
+            <select id="przedmiot" name="przedmiot">
+              <option>Matematyka</option>
+              <option>Język polski</option>
+              <option>Fizyka</option>
+              <option>Chemia</option>
+              <option>Biologia</option>
+              <option>Geografia</option>
+              <option>Historia</option>
+              <option>Informatyka</option>
+              <option>Język angielski</option>
+              <option>Język hiszpański</option>
+              <option>Język niemiecki</option>
+              <option>Nie wiem, doradźcie</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="wiadomosc">Wiadomość (opcjonalnie)</label>
+            <textarea id="wiadomosc" name="wiadomosc" placeholder="Na jakim poziomie jest uczeń, czego oczekujesz..."></textarea>
+          </div>
+
+          <label class="field-check">
+            <input type="checkbox" id="zgoda" required>
+            <span>Zgadzam się na kontakt w sprawie zapisu na korepetycje.</span>
+          </label>
+
+          <button type="submit" class="btn btn--primary btn--block">Zapisz się</button>
+
+          <div class="form-result" id="form-result"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- STOPKA -->
+<footer class="footer">
+  <div class="container footer__top">
+    <div>
+      <div class="footer__logo">
+        <img src="assets/logo-pelne.webp" alt="Veralia">
+      </div>
+      <p class="footer__tag">Veralia: wiedza, która otwiera możliwości.</p>
+      <div class="footer__social">
+        <a href="https://www.facebook.com/p/VerAlia-Szko%C5%82a-Korepetycji-Online-61596003688326/" aria-label="Facebook Veralii">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9h3V5h-3a4 4 0 0 0-4 4v2H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 0 1 1-1z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/veralia.szkolakorepetycji" aria-label="Instagram Veralii">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="4"/><circle cx="12" cy="12" r="3.5"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <h4>Strona</h4>
+      <ul>
+        <li><a href="https://veralia.pl/przedmioty/index.html">Przedmioty</a></li>
+        <li><a href="https://veralia.pl/cennik.html">Cennik</a></li>
+        <li><a href="https://veralia.pl/o-nas.html">O nas</a></li>
+        <li><a href="https://veralia.pl/kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h4>Dane kontaktowe</h4>
+      <ul>
+        <li><a href="mailto:veralia.szkolakorepetycji@gmail.com">veralia.szkolakorepetycji@gmail.com</a></li>
+        <li><a href="https://veralia.pl/zasady.html">Zasady zajęć</a></li>
+        <li><a href="https://veralia.pl/polityka-prywatnosci.html">Polityka prywatności</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <span>© 2026 Veralia</span>
+    <span>Projekt i wykonanie: NBK Projects</span>
+  </div>
+</footer>
+
+<!-- BANER COOKIES (tylko wygląd, bez skryptów śledzących) -->
+<div class="cookie-banner" id="cookie-banner" hidden>
+  <p>Używamy plików cookie do działania strony oraz, po Twojej zgodzie, do analityki i reklam.</p>
+  <div class="cookie-banner__actions">
+    <button type="button" data-cookie="ustawienia">Ustawienia</button>
+    <button type="button" data-cookie="odrzucone">Odrzucam</button>
+    <button type="button" class="primary" data-cookie="zaakceptowane">Akceptuję</button>
+  </div>
+</div>
+
+<span class="robocza">Wersja robocza 2</span>
+
+<script src="js/main.js"></script>
+</body>
+</html>

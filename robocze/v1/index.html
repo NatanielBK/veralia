@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Veralia - korepetycje online (wersja robocza 1)</title>
+<meta name="description" content="Korepetycje online z matematyki i innych przedmiotów. Przygotowanie do egzaminu ósmoklasisty, matury i studiów.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== Nagłówek ===== -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#top" class="logo-link">
+      <img src="assets/logo-pelne.webp" alt="Veralia" class="logo-img">
+    </a>
+    <nav class="site-nav" aria-label="Nawigacja główna">
+      <a href="#korepetytorki">Korepetytorki</a>
+      <a href="#opinie">Opinie</a>
+      <a href="#cennik">Cennik</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a href="#formularz" class="btn btn-primary btn-small">Umów lekcję</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===== 1. Hero ===== -->
+  <section class="section section-light hero">
+    <div class="container hero-grid">
+      <div class="hero-text reveal">
+        <h1>Korepetycje online, po których dziecko <span class="grad">chce się uczyć</span></h1>
+        <p class="lead">Indywidualne lekcje matematyki, innych przedmiotów i&nbsp;języków, prowadzone przez doświadczone korepetytorki. Bez presji, w&nbsp;tempie dopasowanym do&nbsp;ucznia.</p>
+
+        <form class="subject-picker" id="subjectPicker">
+          <div class="picker-group">
+            <span class="picker-label">Przedmiot</span>
+            <div class="chip-row" role="group" aria-label="Wybierz przedmiot">
+              <button type="button" class="chip is-active">Matematyka</button>
+              <button type="button" class="chip">Polski</button>
+              <button type="button" class="chip">Angielski</button>
+              <button type="button" class="chip">Hiszpański</button>
+              <button type="button" class="chip">Niemiecki</button>
+              <button type="button" class="chip">Fizyka</button>
+              <button type="button" class="chip">Chemia</button>
+              <button type="button" class="chip">Biologia</button>
+              <button type="button" class="chip">Geografia</button>
+              <button type="button" class="chip">Historia</button>
+              <button type="button" class="chip">Informatyka</button>
+            </div>
+          </div>
+          <div class="picker-group">
+            <span class="picker-label">Poziom</span>
+            <div class="chip-row" role="group" aria-label="Wybierz poziom">
+              <button type="button" class="chip is-active">Ósmoklasista</button>
+              <button type="button" class="chip">Matura podstawowa</button>
+              <button type="button" class="chip">Matura rozszerzona</button>
+              <button type="button" class="chip">Studia</button>
+            </div>
+          </div>
+          <a href="#formularz" class="btn btn-primary btn-large" id="heroCta">Umów pierwszą lekcję</a>
+        </form>
+      </div>
+
+      <div class="hero-photos" aria-hidden="true">
+        <img src="assets/foto/weronika-walas.jpg" alt="" class="hero-photo hero-photo-1" loading="eager">
+        <img src="assets/foto/aleksandra-pieprzyca.jpg" alt="" class="hero-photo hero-photo-2" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 2. Korepetytorki ===== -->
+  <section class="section section-soft" id="korepetytorki">
+    <div class="container">
+      <h2 class="section-title">Poznaj nasze <span class="grad">korepetytorki</span></h2>
+      <p class="section-lead">Weronika i Aleksandra uczą matematyki online od lat i same prowadzą Veralię.</p>
+
+      <div class="tutor-grid">
+        <article class="tutor-card reveal">
+          <img src="assets/foto/weronika-walas.jpg" alt="Weronika Walas" class="tutor-photo">
+          <div class="tutor-body">
+            <h3>Weronika Walas</h3>
+            <p class="tutor-subject">Matematyka · Ósmoklasista, matura PP i PR</p>
+            <ul class="tutor-badges">
+              <li>Absolwentka UJ</li>
+              <li>6 lat doświadczenia</li>
+            </ul>
+            <p class="tutor-note">Uczniowie Weroniki osiągają na maturze wyniki 80-98%.</p>
+            <div class="tutor-footer">
+              <span class="tutor-price">od <strong>130 zł</strong> / 60 min</span>
+              <a href="https://veralia.pl/o-nas.html" class="btn btn-outline btn-small">Zobacz profil</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tutor-card reveal">
+          <img src="assets/foto/aleksandra-pieprzyca.jpg" alt="Aleksandra Pieprzyca" class="tutor-photo">
+          <div class="tutor-body">
+            <h3>Aleksandra Pieprzyca</h3>
+            <p class="tutor-subject">Matematyka · poziom podstawowy i rozszerzony</p>
+            <ul class="tutor-badges">
+              <li>AGH Kraków</li>
+              <li>4 lata doświadczenia</li>
+            </ul>
+            <p class="tutor-note">Stawia na cierpliwość i samodzielne rozumienie materiału.</p>
+            <div class="tutor-footer">
+              <span class="tutor-price">od <strong>130 zł</strong> / 60 min</span>
+              <a href="https://veralia.pl/o-nas.html" class="btn btn-outline btn-small">Zobacz profil</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 3. Opinie ===== -->
+  <section class="section section-light" id="opinie">
+    <div class="container">
+      <h2 class="section-title">Co mówią <span class="grad">rodzice i uczniowie</span></h2>
+
+      <div class="reviews-track" id="reviewsTrack">
+        <article class="review-card">
+          <p class="review-text">Dziękuję za ten rok przygotowań do matury. Z Panią Weroniką zaczynałam naukę praktycznie od zera, matematyka nigdy nie była mi bliska. Dzięki współpracy udało mi się uzyskać 87% z matury, a matematyka przestała być dziedziną z kosmosu. Dzięki!</p>
+          <div class="review-author"><span class="review-avatar">M</span><span>Maturzystka</span></div>
+        </article>
+        <article class="review-card">
+          <p class="review-text">Zajęcia z Panią Aleksandrą to zdecydowanie strzał w dziesiątkę. W poprzednim semestrze syn miał same 1 i 2, a w tym średnia z matematyki to ponad 4,80. Szok! Serdecznie polecamy.</p>
+          <div class="review-author"><span class="review-avatar">M</span><span>Mama ucznia</span></div>
+        </article>
+        <article class="review-card">
+          <p class="review-text">Jestem mamą chłopca ze spektrum. Nauczyciele w szkole publicznej spisali mojego syna na straty, odsyłają od poradni do poradni. Dzięki indywidualnemu podejściu Pani Weroniki, wsparciu i kompetencjom syn zaczął chętniej chodzić do szkoły i zaliczać sprawdziany. Pani Weronika prócz wielkiej wiedzy wiele razy wykazała się też dużym sercem. Super korepetytor!</p>
+          <div class="review-author"><span class="review-avatar">M</span><span>Mama ucznia</span></div>
+        </article>
+        <article class="review-card review-card-video">
+          <div class="video-placeholder">
+            <span class="play-icon" aria-hidden="true">&#9658;</span>
+            <p>Wkrótce wideo od rodziców</p>
+          </div>
+        </article>
+        <article class="review-card">
+          <p class="review-text">Z całego serduszka polecam lekcje i przygotowania do matury z Weroniką, to przede wszystkim dzięki niej zdałam poprawkę. Nigdy przy żadnych nauczycielach matematyki nie czułam się tak komfortowo i bezpiecznie do zadawania pytań. Nigdy nie czułam się zawstydzona, bo czegoś nie potrafiłam rozwiązać. Naprawdę, jeśli korepetytor, to tylko taki.</p>
+          <div class="review-author"><span class="review-avatar">U</span><span>Uczennica, poprawka matury</span></div>
+        </article>
+        <article class="review-card">
+          <p class="review-text">Dzisiaj w szkole rozwiązywała zadanie przy tablicy i zrobiła całe samodzielnie. Pan był bardzo pozytywnie zaskoczony i ją pochwalił. Pytał, czy się uczyła. Powiedziała, że ma korepetycje. Pan od matematyki powiedział, żeby pozdrowiła od niego Panią, która ją nauczyła, bo jest znakomita.</p>
+          <div class="review-author"><span class="review-avatar">M</span><span>Mama uczennicy</span></div>
+        </article>
+        <article class="review-card">
+          <p class="review-text">Pani Weronika pomaga moim dzieciom w nauce matematyki, jest kompetentna, profesjonalna, a jednocześnie pełna zaangażowania i empatii. Widać nie tylko postęp na podstawie ocen, ale również zmieniło się na lepsze samo podejście dzieci do tego przedmiotu.</p>
+          <div class="review-author"><span class="review-avatar">M</span><span>Magdalena P., mama uczniów</span></div>
+        </article>
+      </div>
+      <div class="reviews-dots" id="reviewsDots" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <!-- ===== 4. Jak zaczynamy ===== -->
+  <section class="section section-soft" id="jak-zaczynamy">
+    <div class="container">
+      <h2 class="section-title">Jak <span class="grad">zaczynamy</span></h2>
+
+      <div class="steps-grid">
+        <div class="step-card reveal">
+          <span class="step-num">1</span>
+          <h3>Napisz do nas</h3>
+          <p>Wypełnij krótki formularz i wskaż przedmiot oraz poziom nauczania.</p>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-num">2</span>
+          <h3>Umów termin</h3>
+          <p>Dobierzemy korepetytorkę do potrzeb ucznia i ustalimy termin pierwszej lekcji.</p>
+        </div>
+        <div class="step-card reveal">
+          <span class="step-num">3</span>
+          <h3>Zacznij naukę</h3>
+          <p>Pierwsza lekcja online, bez zobowiązań do dalszej, regularnej współpracy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 5. Cennik ===== -->
+  <section class="section section-light" id="cennik">
+    <div class="container">
+      <h2 class="section-title">Przejrzysty <span class="grad">cennik</span></h2>
+      <p class="section-lead">Każda lekcja trwa pełne 60 minut i odbywa się indywidualnie, online.</p>
+
+      <div class="pricing-grid">
+        <article class="price-card reveal">
+          <h3>Przedmioty szkolne</h3>
+          <p class="price-desc">Poziom podstawowy · 60 min</p>
+          <p class="price-value">130 zł</p>
+          <a href="#formularz" class="btn btn-outline btn-small">Umów lekcję</a>
+        </article>
+        <article class="price-card price-card-highlight reveal">
+          <h3>Poziom rozszerzony</h3>
+          <p class="price-desc">Przedmioty szkolne · 60 min</p>
+          <p class="price-value">140 zł</p>
+          <a href="#formularz" class="btn btn-primary btn-small">Umów lekcję</a>
+        </article>
+        <article class="price-card reveal">
+          <h3>Języki obce</h3>
+          <p class="price-desc">Angielski, hiszpański, niemiecki · 60 min</p>
+          <p class="price-value">140 zł</p>
+          <a href="#formularz" class="btn btn-outline btn-small">Umów lekcję</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 6. FAQ ===== -->
+  <section class="section section-light" id="faq">
+    <div class="container container-narrow">
+      <h2 class="section-title">Najczęstsze <span class="grad">pytania</span></h2>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Jak zapisać się na korepetycje?</summary>
+          <p>Wystarczy wypełnić <a href="#formularz">formularz zgłoszeniowy</a> na tej stronie, wskazując wybrany przedmiot, poziom nauczania oraz swoje potrzeby. Po otrzymaniu zgłoszenia skontaktujemy się z Tobą, aby ustalić szczegóły, dobrać odpowiednią korepetytorkę i zaproponować termin pierwszych zajęć.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Czy mogę zapisać się tylko na jedną lekcję?</summary>
+          <p>Tak. Nie musisz od razu deklarować długoterminowej współpracy. Możesz rozpocząć od pojedynczego spotkania, a następnie zdecydować, czy chcesz kontynuować naukę regularnie.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Ile trwa jedna lekcja?</summary>
+          <p>Każda lekcja w Veralii trwa pełne 60 minut. Wierzymy, że odpowiednia ilość czasu pozwala nie tylko dokładnie omówić materiał, ale również przećwiczyć nowe zagadnienia i rozwiać ewentualne wątpliwości.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Ile kosztują korepetycje?</summary>
+          <p>Korepetycje z przedmiotów szkolnych to 130 zł za 60 minut, poziom rozszerzony to 140 zł za 60 minut, a język angielski, hiszpański i niemiecki to 140 zł za 60 minut. Cena obejmuje indywidualną lekcję online.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 7. Formularz ===== -->
+  <section class="section section-gradient" id="formularz">
+    <div class="container form-grid">
+      <div class="form-intro reveal">
+        <h2>Zapisz się na <span class="grad-light">pierwszą lekcję</span></h2>
+        <p class="lead">Wypełnij krótki formularz, a skontaktujemy się z Tobą, aby ustalić szczegóły.</p>
+        <ul class="form-points">
+          <li><span class="check" aria-hidden="true">&#10003;</span>Możesz zacząć od jednej lekcji, bez zobowiązań.</li>
+          <li><span class="check" aria-hidden="true">&#10003;</span>Dobierzemy korepetytorkę do poziomu i potrzeb ucznia.</li>
+          <li><span class="check" aria-hidden="true">&#10003;</span>Bezpłatne odwołanie najpóźniej 24 godziny przed zajęciami.</li>
+        </ul>
+        <p class="form-contact-note">Masz pytania? Napisz: <a href="mailto:veralia.szkolakorepetycji@gmail.com">veralia.szkolakorepetycji@gmail.com</a></p>
+      </div>
+
+      <div class="form-wrap reveal">
+        <form id="signupForm" class="signup-form" novalidate>
+          <div class="form-field">
+            <label for="f-name">Imię i nazwisko</label>
+            <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Wpisz imię i nazwisko" required>
+          </div>
+
+          <div class="form-field">
+            <label for="f-email">Adres e-mail</label>
+            <input type="email" id="f-email" name="email" autocomplete="email" placeholder="adres@email.pl" required>
+          </div>
+
+          <div class="form-field">
+            <label for="f-phone">Numer telefonu</label>
+            <input type="tel" id="f-phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="np. 600 700 800" required aria-describedby="f-phone-err">
+            <p class="field-error" id="f-phone-err" role="alert"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="f-subject">Przedmiot</label>
+            <select id="f-subject" name="subject" required>
+              <option value="" disabled selected>Wybierz przedmiot</option>
+              <option value="matematyka">Matematyka</option>
+              <option value="jezyk-polski">Język polski</option>
+              <option value="fizyka">Fizyka</option>
+              <option value="chemia">Chemia</option>
+              <option value="biologia">Biologia</option>
+              <option value="geografia">Geografia</option>
+              <option value="historia">Historia</option>
+              <option value="informatyka">Informatyka</option>
+              <option value="jezyk-angielski">Język angielski</option>
+              <option value="jezyk-hiszpanski">Język hiszpański</option>
+              <option value="jezyk-niemiecki">Język niemiecki</option>
+              <option value="nie-wiem">Nie wiem, pomóżcie mi wybrać</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary form-submit" id="formSubmitBtn">Wyślij zgłoszenie</button>
+          <p class="field-error form-send-error" id="formSendErr" role="alert" hidden></p>
+          <p class="form-note" id="formNote" hidden>To wersja robocza, formularz zadziała po wdrożeniu.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== Stopka ===== -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo-pelne.webp" alt="Veralia" class="logo-img logo-img-footer">
+      <p>Veralia: wiedza, która otwiera możliwości.</p>
+    </div>
+    <nav class="footer-links" aria-label="Linki w stopce">
+      <a href="#cennik">Cennik</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://veralia.pl/zasady.html">Zasady zajęć</a>
+      <a href="https://veralia.pl/polityka-prywatnosci.html">Polityka prywatności</a>
+    </nav>
+    <div class="footer-contact">
+      <a href="mailto:veralia.szkolakorepetycji@gmail.com">veralia.szkolakorepetycji@gmail.com</a>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/p/VerAlia-Szko%C5%82a-Korepetycji-Online-61596003688326/" target="_blank" rel="noopener" aria-label="Veralia na Facebooku">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M13.5 21v-7.2h2.4l.36-2.8h-2.76V9.2c0-.8.22-1.36 1.38-1.36h1.48V5.33A20 20 0 0014.9 5.2c-2.1 0-3.54 1.28-3.54 3.63v2.17H9v2.8h2.36V21h2.14z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/veralia.szkolakorepetycji" target="_blank" rel="noopener" aria-label="Veralia na Instagramie">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© 2026 Veralia</p>
+    <p>Projekt i wykonanie: NBK Projects</p>
+  </div>
+</footer>
+
+<!-- ===== Baner cookies (tylko wygląd) ===== -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-label="Zgoda na pliki cookie">
+  <div class="cookie-text">
+    <p>Używamy plików cookie, aby strona działała poprawnie i abyśmy mogli analizować ruch. Możesz zaakceptować wszystkie, odrzucić niekonieczne albo dopasować ustawienia.</p>
+  </div>
+  <div class="cookie-actions">
+    <button type="button" class="btn btn-ghost btn-small" id="cookieSettings">Ustawienia</button>
+    <button type="button" class="btn btn-outline btn-small" id="cookieReject">Odrzucam</button>
+    <button type="button" class="btn btn-primary btn-small" id="cookieAccept">Akceptuję</button>
+  </div>
+</div>
+
+<div class="cookie-panel" id="cookiePanel" hidden>
+  <div class="cookie-panel-inner">
+    <h3>Ustawienia prywatności</h3>
+    <label class="cookie-option"><input type="checkbox" checked disabled><span>Niezbędne (zawsze aktywne)</span></label>
+    <label class="cookie-option"><input type="checkbox" id="cookieAnalytics"><span>Analityka (GA4)</span></label>
+    <label class="cookie-option"><input type="checkbox" id="cookieMarketing"><span>Marketing (Meta, TikTok)</span></label>
+    <button type="button" class="btn btn-primary btn-small" id="cookieSave">Zapisz ustawienia</button>
+  </div>
+</div>
+
+<span class="robocza">Wersja robocza 1</span>
+
+<script src="script.js"></script>
+</body>
+</html>
